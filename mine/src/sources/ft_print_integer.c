@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:39:12 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 14:28:20 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 21:39:18 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ int			ft_print_integer(va_list list, t_flag flag)
 	int		str_len;
 	int		k;
 	
-	i = ft_length_int(list, flag);
+	i = (flag.length.l != 'z' && flag.length.l != 'j') ? ft_length_int(list, flag) : va_arg(list, long long int);;
 	str = ft_itoa_base(i, 10, flag);
 	str_len = ft_strlen(str);
 	if (flag.space > 0)
 	{
 		if (flag.size.space && flag.dot && flag.size.space > flag.size.dot)
-			flag.size.star = flag.size.space;
+			flag.size.star = flag.size.space * flag.length.minus;
 		else if (!flag.plus && i >= 0)
 			write(1, " ", 1);
 	}
@@ -58,6 +58,7 @@ int			ft_print_integer(va_list list, t_flag flag)
 		if (i >= 0)
 			write(1, "+", 1);
 		if (flag.star == 1)
+			// flag.size.star = (flag.size.star >= 0) ? flag.size.star++ : flag.size.star--;
 			flag.size.star++;
 	}
 	str_len = ft_print_with_indent(str, flag.size.star, str_len, 1);

@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 20:49:50 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/10 19:30:55 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 21:26:51 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,12 @@ t_flag  ft_parse_flag_zero(const char *format, size_t *i, va_list list, t_flag  
 t_flag  ft_parse_flag_minus(const char *format, size_t *i, va_list list, t_flag  flag)
 {
 	flag.star = 1;
+	if (format[*i] == '-')
+		flag.minus_plus = 4;
 	flag.size.star = ft_count_size(format, i, list);
 	if (format[*i] == '+')
 		flag.minus_plus = 2;
+	flag.length.minus = -1;
 	return (flag);
 }
 

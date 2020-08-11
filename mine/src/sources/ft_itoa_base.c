@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:39:48 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 14:36:12 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 18:48:20 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,18 @@ char		*ft_itoa_base(long long n, int base, t_flag flag)
 	char	*str;
 
 	power = ft_power(n, base);
+	sign = (n < 0) ? -1 : 1;
 	if (flag.dot > 0 && flag.size.dot > 0)
 		power = (flag.size.dot >= power) ? flag.size.dot + (n < 0) : power;
 	else if (flag.zero > 0)
 	{
 		power = (flag.size.zero >= power) ? flag.size.zero : power;
 		if (flag.plus == 1 && flag.size.zero > ft_power(n, base))
-			power--;
+		{
+			power = (flag.size.zero < flag.size.plus) ? flag.size.plus : flag.size.zero;
+			if (sign > 0)
+				power--;
+		}
 	}
 	else if (flag.space > 0)
 	{
@@ -77,7 +82,6 @@ char		*ft_itoa_base(long long n, int base, t_flag flag)
 	if (!(str = (char *)malloc(sizeof(char) * (power + 1))))
 		return (NULL);
 	str[power] = '\0';
-	sign = (n < 0) ? -1 : 1;
 	while (power > 0)
 	{
 		power--;

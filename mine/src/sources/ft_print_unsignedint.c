@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:41:31 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 15:09:22 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 21:13:28 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,17 +64,24 @@ char		*ft_utoa_base(unsigned long long int n, int base, t_flag flag)
 }
 
 int					ft_print_unsignedint(va_list list,
-		t_flag flag, int base, int is_toupper)
+					t_flag flag, int base, int is_toupper)
 {
 	unsigned long long int	u;
-	char			*str;
-	int				i;
-	int				len;
-	int				k;
+	char					*str;
+	int						i;
+	int						len;
+	int						k;
 
-	u = ft_length_uint(list, flag);
+	u = (flag.type != 'U' && flag.type != 'j') ? ft_length_uint(list, flag) : va_arg(list, long long int);;
 	str = ft_utoa_base(u, base, flag);
-	str = (flag.hash == 1 && u != 0) ? ft_strjoin(ft_hash(ft_power(u, base), flag), str) : str;
+	len = ft_strlen(str);
+	if (len != flag.size.zero)
+		str = (flag.hash == 1 && u != 0) ? ft_strjoin(ft_hash(ft_power(u, base), flag), str) : str;
+	else if (flag.hash == 1 && u != 0)
+	{
+		str[0] = '0';
+		str[1] = 'x';
+	}
 	i = 0;
 	len = ft_strlen(str);
 	if (is_toupper)
@@ -85,6 +92,8 @@ int					ft_print_unsignedint(va_list list,
 		}
 	if (flag.zero && flag.dot && flag.size.zero > flag.size.dot)
 		flag.size.star = flag.size.zero;
+	else if (((flag.minus_plus == 4 && flag.hash == 1) || (flag.minus_plus == 4 && flag.hash == 1)) && flag.size.star > 0)
+		flag.size.star = flag.size.star * (-1);
 	k = flag.size.star;
 	while (k-- > len)
 		write(1, " ", 1);

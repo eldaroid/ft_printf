@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/30 18:10:19 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 14:50:59 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 21:56:40 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 int				division_by_type(int type, va_list list, t_flag flag, int count)
 {
-	// char	t = (char)type;
-	// printf("%c", t);
 	if (type == 'd' || type == 'i')
 	{
 			flag.type = 'd';
@@ -23,6 +21,11 @@ int				division_by_type(int type, va_list list, t_flag flag, int count)
 	}
 	else if (type == 'u')
 		count += ft_print_unsignedint(list, flag, 10, 0);
+	else if (type == 'U')
+	{
+		flag.type = 'U';
+		count += ft_print_unsignedint(list, flag, 10, 0);
+	}
 	else if (type == 'x')
 	{
 		flag.type = 'x';
@@ -54,9 +57,10 @@ int				division_by_type(int type, va_list list, t_flag flag, int count)
 int				print_type(const char *str, size_t *i, va_list list, t_flag	flag)
 {
 	int			count;
-	
+
 	count = 0;
 	count = division_by_type(str[*i], list, flag, count);
-	(*i)++;
+	if (str[*i] && str[*i] != 'Z')
+		(*i)++;
 	return (count);
 }

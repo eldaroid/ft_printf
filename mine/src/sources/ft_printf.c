@@ -6,13 +6,13 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:24:33 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/10 19:24:53 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 21:55:52 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_flag      ft_parse_length(const char *format, size_t *i, t_flag flag)
+t_flag      ft_parse_length(const char *format, size_t *i, va_list list, t_flag  flag)
 {
 	if (format[*i] == 'l' && format[(*i) + 1] == 'l')
 	{
@@ -21,6 +21,10 @@ t_flag      ft_parse_length(const char *format, size_t *i, t_flag flag)
 	}
 	else if (format[*i] == 'l' || format[*i] == 'L')
 		flag.length.l = 1;
+	else if (format[*i] == 'z')
+		flag.length.l = 'z';
+	else if (format[*i] == 'j')
+		flag.length.l = 'j';
 	else if (format[*i] == 'h' && format[(*i) + 1] == 'h')
 	{
 		flag.length.hh = 1;
@@ -28,13 +32,14 @@ t_flag      ft_parse_length(const char *format, size_t *i, t_flag flag)
 	}
 	else if (format[*i] == 'h')
 		flag.length.h = 1;
+	flag.size.star = ft_count_size(format, i, list);
 	(*i)++;
 	return (flag);
 }
 
 t_flag  ft_parse_flag(const char *format, size_t *i, va_list list, t_flag flag)
 {
-	while (!(ft_strchr("cspdiuxoXfeg%", format[*i]))) // f and ll hh
+	while (!(ft_strchr("cspdiuxoXfegUZ%", format[*i])) && format[*i])
 	{
 		if (format[*i] == '0')
 			flag = ft_parse_flag_zero(format, i, list, flag);
@@ -52,11 +57,11 @@ t_flag  ft_parse_flag(const char *format, size_t *i, va_list list, t_flag flag)
 			flag.hash = 1;
 			(*i)++;
 		}
-		else if (format[*i] == 'l' || format[*i] == 'h' || format[*i] == 'L')
-			flag = ft_parse_length(format, i, flag);
-		else
+		else if (format[*i] == 'l' || format[*i] == 'h' || format[*i] == 'L' || format[*i] == 'j' || format[*i] == 'z')
+			flag = ft_parse_length(format, i, list, flag);
+		else 
 			(*i)++;
-	}
+		}
 	return (flag);
 }
 
@@ -64,11 +69,10 @@ int     ft_parser(const char *format, size_t *i, va_list list)
 {
 	t_flag      flag;
 
-	flag = (t_flag){ 0, 0, 0, 0, 0, 0, 0, 0, { 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
+	flag = (t_flag){ 0, 0, 0, 0, 0, 0, 0, 0, { 0, 0, 0, 0, 1}, { 0, 0, 0, 0, 0 } };
 	flag = ft_parse_flag(format, i, list, flag);
 	return (print_type(format, i, list, flag));
 }
-
 
 int     ft_sprintf(const char *format, va_list list)
 {
@@ -79,7 +83,7 @@ int     ft_sprintf(const char *format, va_list list)
 	i = 0;
 	while (format[i])
 	{
-		while (format[i] != '%' && format[i])
+		while (format[i] && format[i] != '%')
 		{
 			write(1, &format[i], 1);
 			i++;

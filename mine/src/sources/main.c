@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:22:43 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 15:15:32 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 21:56:49 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,34 @@ int     main(void)
 	// printf("o1 = %#.3o\n", 1);
 	// ft_printf("o2 = %#.3o\n", 1);
 
-ft_printf("%#08x", 42);                       -> "0x00002a"
-ft_printf("%-#6o", 2500);                     -> "04704 "
-ft_printf("%0+5d", 42);                       -> "+0042"
-ft_printf("%0+5d", -42);                      -> "-0042"
+// int i =  printf("% hZ\n");
+// int j =  ft_printf("% hZ\n");
+
+// int j =  ft_printf("@main_ftprintf: %###-#0000 33...12..#0+0d\n", 256);
+// int i =  printf("@main_ftprintf: %###-#0000 33...12..#0+0d\n", 256);
+
+// printf("3 = %d\n", i);
+// printf("4 = %d\n", j);
+
+// ft_printf("%Z");
+// printf("%Z");
+
+
+// printf("1 = %0+5d\n", 42);
+// ft_printf("2 = %0+5d\n", 42);
+// printf("3 = %0+5d\n", -42);
+// ft_printf("4 = %0+5d\n", -42);
+
+// ft_printf("%Z");
+// ft_printf("%Z");
+
+// printf("% Z", "test");
+// ft_printf("% Z", "test");
+
+// ft_printf("%#08x", 42);                       -> "0x00002a"
+// ft_printf("%-#6o", 2500);                     -> "04704 "
+// ft_printf("%0+5d", 42);                       -> "+0042"
+// ft_printf("%0+5d", -42);                      -> "-0042"
 
 // printf("%ld", (long)INT_MAX + 1);
 
