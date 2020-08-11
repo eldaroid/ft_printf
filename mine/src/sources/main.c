@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:22:43 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 15:07:25 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 15:15:32 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ int     main(void)
 	// printf("o1 = %#.3o\n", 1);
 	// ft_printf("o2 = %#.3o\n", 1);
 
-printf("%#.3o\n", 1);
-ft_printf("%#.3o\n", 1);
+ft_printf("%#08x", 42);                       -> "0x00002a"
+ft_printf("%-#6o", 2500);                     -> "04704 "
+ft_printf("%0+5d", 42);                       -> "+0042"
+ft_printf("%0+5d", -42);                      -> "-0042"
 
 // printf("%ld", (long)INT_MAX + 1);
 
