@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:39:48 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/10 20:37:56 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 14:36:12 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,12 @@ char		*ft_itoa_base(long long n, int base, t_flag flag)
 	else if (flag.zero > 0)
 	{
 		power = (flag.size.zero >= power) ? flag.size.zero : power;
+		if (flag.plus == 1 && flag.size.zero > ft_power(n, base))
+			power--;
+	}
+	else if (flag.space > 0)
+	{
+		power = (flag.size.space >= power) ? flag.size.space - 1 : power;
 		if (flag.plus == 1 && flag.size.zero > ft_power(n, base))
 			power--;
 	}

@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 15:38:33 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/10 18:11:40 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 14:23:21 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,8 @@ unsigned long long int      ft_length_uint(va_list list, t_flag flag);
 long long int		    ft_length_int(va_list list, t_flag flag);
 t_flag                  ft_parse_length(const char *format, size_t *i, t_flag flag);
 char     *ft_hash(int power, t_flag flag);
+char		*ft_utoa_base(unsigned long long int n, int base, t_flag flag);
+int			ft_upower(unsigned long long int n, int base);
 int     	main(void);
 
 #endif

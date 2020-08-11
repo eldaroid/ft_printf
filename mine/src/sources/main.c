@@ -6,11 +6,12 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:22:43 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/10 20:38:14 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 14:48:28 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <limits.h>
 
 int     main(void)
 {
@@ -30,8 +31,13 @@ int     main(void)
 
 	// int i = printf("%#.o, %#.0o\n", 0, 0);
 	
-	printf("o1 = %#.3o\n", 1);
-	ft_printf("o2 = %#.3o\n", 1);
+	// printf("o1 = %#.3o\n", 1);
+	// ft_printf("o2 = %#.3o\n", 1);
+
+printf("%#.3o\n", 1);
+ft_printf("%#.3o\n", 1);
+
+// printf("%ld", (long)INT_MAX + 1);
 
 	// printf("a1 = %#.o, %#.0o\n", 0, 0);
 	// ft_printf("a2 = %#.o, %#.0o\n", 0, 0);

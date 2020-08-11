@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/30 18:10:19 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/10 20:25:22 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 14:50:59 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ int				division_by_type(int type, va_list list, t_flag flag, int count)
 	}
 	else if (type == 'u')
 		count += ft_print_unsignedint(list, flag, 10, 0);
-	else if (type == 'x') // # used
+	else if (type == 'x')
 	{
 		flag.type = 'x';
 		count += ft_print_unsignedint(list, flag, 16, 0);
 	}
-	else if (type == 'X') // # used
+	else if (type == 'X')
 	{
 		flag.type = 'X';
 		count += ft_print_unsignedint(list, flag, 16, 1);

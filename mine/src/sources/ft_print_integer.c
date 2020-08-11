@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:39:12 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/10 15:21:37 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 14:28:20 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		size_flags(t_flag flag, int	k)
 
 int			ft_print_integer(va_list list, t_flag flag)
 {
-	int		i;
+	long long int		i;
 	char	*str;
 	int		str_len;
 	int		k;
