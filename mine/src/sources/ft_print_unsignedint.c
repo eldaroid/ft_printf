@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:41:31 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 14:50:48 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/11 15:09:22 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ char		*ft_utoa_base(unsigned long long int n, int base, t_flag flag)
 		power = 0;
 	if (flag.type == 'o' && (flag.type == 111 && flag.hash == 1) && flag.size.dot == 0)
 		power = ft_upower(n, base);
+	if (flag.type == 'o' && (flag.size.dot >= power) && flag.hash == 1)
+		power--;
 	if (!(str = (char *)malloc(sizeof(char) * (power + 1))))
 		return (NULL);
 	str[power] = '\0';
@@ -72,7 +74,7 @@ int					ft_print_unsignedint(va_list list,
 
 	u = ft_length_uint(list, flag);
 	str = ft_utoa_base(u, base, flag);
-	str = (flag.hash == 1 && u != 0 && flag.type != 'o') ? ft_strjoin(ft_hash(ft_power(u, base), flag), str) : str;
+	str = (flag.hash == 1 && u != 0) ? ft_strjoin(ft_hash(ft_power(u, base), flag), str) : str;
 	i = 0;
 	len = ft_strlen(str);
 	if (is_toupper)
