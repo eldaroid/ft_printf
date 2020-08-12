@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:41:31 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 21:13:28 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 17:07:42 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int					ft_print_unsignedint(va_list list,
 	int						len;
 	int						k;
 
-	u = (flag.type != 'U' && flag.type != 'j') ? ft_length_uint(list, flag) : va_arg(list, long long int);;
+	u = (flag.type != 'U' && flag.type != 'j' && flag.length.l != 'j') ? ft_length_uint(list, flag) : va_arg(list, long long int);
 	str = ft_utoa_base(u, base, flag);
 	len = ft_strlen(str);
 	if (len != flag.size.zero)

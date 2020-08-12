@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/15 17:22:01 by eldaroid          #+#    #+#             */
-/*   Updated: 2019/09/17 22:11:22 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 17:45:02 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	*ft_memalloc(size_t size)
 	new = malloc(size);
 	if (!new)
 		return (NULL);
-	ft_bzero(new, size);
+	ft_bzero(new, 0, size);
 	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:22:43 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/12 15:06:45 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 18:30:57 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,86 +40,48 @@ int     main(void)
 // int j =  ft_printf("%- 10.#0+d\n", 256);
 // int i =  printf("%- 10.#0+d\n", 256);
 
-// printf("3 = %d\n", i);
-// printf("4 = %d\n", j);
 // ft_printf("%-+10.5d", 4242);
 // printf("%-+10.5d", 4242);z
 
 
-// int k =  ft_printf("%-+10.5d\n", 4242);
-// int l =  printf("%-+10.5d\n", 4242);
+// int k =  ft_printf("%+-10.5d\n", 4242);
+// int l =  printf("%+-10.5d\n", 4242);
 
 // printf("3 = %d\n", k);
 // printf("4 = %d\n", l);
+
+// printf("%+d\n", 42);
+// ft_printf("%+d\n", 42);
+
+// int i = ft_printf("%-+10.5d\n", 4242);
+// int j = printf("%-+10.5d\n", 4242);
+
 
 // ft_printf("%d", -1);
 
 // ft_printf("%Z");
 // printf("%Z");
-
-
-// printf("1 = %0+5d\n", 42);
-// ft_printf("2 = %0+5d\n", 42);
-// printf("3 = %0+5d\n", -42);
-// ft_printf("4 = %0+5d\n", -42);
-
-// ft_printf("%Z");
-// ft_printf("%Z");
-
-// printf("% Z", "test");
-// ft_printf("% Z", "test");
-
-// ft_printf("%#08x", 42);                       -> "0x00002a"
-// ft_printf("%-#6o", 2500);                     -> "04704 "
-// ft_printf("%0+5d", 42);                       -> "+0042"
-// ft_printf("%0+5d", -42);                      -> "-0042"
-
-// printf("%ld", (long)INT_MAX + 1);
-
-	// printf("a1 = %#.o, %#.0o\n", 0, 0);
-	// ft_printf("a2 = %#.o, %#.0o\n", 0, 0);
-
-	// printf("b1 = %.o, %.0o\n", 0, 0);
-	// ft_printf("b2 = %.o, %.0o\n", 0, 0);
-
-	// printf("s1 = %.d, %.0d\n", 0, 0);
-	// ft_printf("s2 = %.d, %.0d\n", 0, 0);
-
-
-	// printf("1!%d\n", i);
-	// printf("2!%d\n", j);
-	
-	// int i = printf("%\n");
-	// int j = ft_printf("%");
-
-	// printf("1!%d\n", i);
-	// printf("2!%d\n", j);
-// 	%05.0f", -0.0
-// %05.1f", 7.3
-
-	//mine
-	// ("%#.0f", -0.0);
-	// ("%+.0f", 0.0);
-	// ("%+.0f", -0.0);
-	// ("%+.3f", 0.0);
-	// ("%+.3f", -0.0);
-	// ("%5.0f", 0.0);
-	// ("%05.0f", 0.0);
-	// ("%05.1f", -7.3);
-	// ("%-5.3f", -0.0);
-	// ("%-5.0f", 7.3);
 	
 
 	// 314 tests 6 ./test bonus_f
 
-	
+	// int i = printf("%jx\n", 4294967296);
+	// int j = ft_printf("%jx\n", 4294967296);
+
+	// int i = ft_printf("%010s\n", "this");
+	// int j = printf("%010s\n", "this");
 // ft_printf("%0+5d", -42);
 // ft_printf("%010s is a string", "this");
 // ft_printf("% Z", 42);
 // ft_printf("%");
+// ft_printf("%05c", 42);
+// int i = ft_printf("1%010s is a string\n", "this");
+// int j = printf("2%010s is a string\n", "this");
 //  28. FAIL ft_printf("%5+d", 42);                        -> "  +42"
 //   29. FAIL ft_printf("%5+d", -42);                       -> "  -42"
 //   30. FAIL ft_printf("%-5+d", 42);
 //   32. FAIL ft_printf("%-5+d", -42);
+	// printf("3 = %d\n", i);
+	// printf("4 = %d\n", j);
     return (0);
 }

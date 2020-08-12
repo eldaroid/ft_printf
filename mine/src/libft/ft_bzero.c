@@ -6,13 +6,13 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 19:43:14 by fgracefo          #+#    #+#             */
-/*   Updated: 2019/09/11 21:14:03 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 17:44:13 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, char c, int n)
 {
 	unsigned char *a;
 
@@ -20,7 +20,7 @@ void	ft_bzero(void *s, size_t n)
 	if (n > 0)
 	{
 		while (n-- > 0)
-			*(a++) = 0;
+			*(a++) = c;
 	}
 	return ;
 }

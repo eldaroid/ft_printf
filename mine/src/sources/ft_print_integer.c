@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:39:12 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/12 15:06:36 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 15:56:05 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,37 @@ int		size_flags(t_flag flag, int	k)
 		i = flag.size.space;
 	i -= k;
 	return (i);
+}
+
+int		ft_print_with_int(char *str, int size_star, int str_len, int clean, t_flag flag)
+{
+	int	count;
+
+	count = str_len;
+	if (size_star > str_len || (-1) * size_star > str_len)
+		count = (size_star > 0) ? size_star : (-1) * size_star;
+	while (size_star-- > str_len)
+		if (clean == 1)
+				clean = 1;
+	write(1, str, str_len);
+	if (size_star < 0 && flag.length.minus == -1)
+	{
+		count = 0;
+		while ((-1) * (size_star++) > str_len + 1)
+		{
+			write(1, " ", 1);
+			count++;
+		}
+		if (flag.plus == 1 && flag.length.minus == -1 && flag.minus_plus != 2)
+			count++;
+		count += str_len;
+	}
+	if (clean)
+	{
+		free(str);
+		str = NULL;
+	}
+	return (count);
 }
 
 int			ft_print_integer(va_list list, t_flag flag)
@@ -60,8 +91,8 @@ int			ft_print_integer(va_list list, t_flag flag)
 		if (flag.star == 1)
 			flag.size.star++;
 	}
-	str_len = (flag.plus == 1 && flag.length.minus == -1) ? ft_print_with_indent(str, 0, str_len, 1) : ft_print_with_indent(str, flag.size.star, str_len, 1);
-	if (flag.plus || flag.space)
+	str_len = (flag.length.minus == -1) ? ft_print_with_int(str, flag.size.star, str_len, 1, flag) : ft_print_with_indent(str, flag.size.star, str_len, 1);
+	if ((flag.plus || flag.space) && !(flag.length.minus == -1 && flag.plus == 1))
 	{
 		if ((flag.plus || flag.space) && (flag.size.star >= str_len || (-1) * flag.size.star >= str_len))
 			str_len = (flag.size.star > 0) ? flag.size.star : (-1) * (flag.size.star);
@@ -70,8 +101,9 @@ int			ft_print_integer(va_list list, t_flag flag)
 	}
 	if (flag.minus_plus == 2)
 	{
-		k = (flag.size.plus > flag.size.star) ? flag.size.plus : flag.size.star;
-		while (k-- > str_len)
+		k = (flag.size.plus > flag.size.star) ? flag.size.plus: flag.size.star;
+		
+		while (--k > str_len)
 			write(1, " ", 1);
 		str_len = (flag.size.plus > flag.size.star) ? flag.size.plus : flag.size.star;
 	}
