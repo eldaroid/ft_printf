@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:39:12 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/12 13:00:27 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 15:06:36 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,9 @@ int			ft_print_integer(va_list list, t_flag flag)
 		if (i >= 0)
 			write(1, "+", 1);
 		if (flag.star == 1)
-			flag.size.star = (flag.size.star >= 0) ? flag.size.star++ : flag.size.star--;
-			// flag.size.star++;
+			flag.size.star++;
 	}
-	str_len = ft_print_with_indent(str, flag.size.star, str_len, 1);
+	str_len = (flag.plus == 1 && flag.length.minus == -1) ? ft_print_with_indent(str, 0, str_len, 1) : ft_print_with_indent(str, flag.size.star, str_len, 1);
 	if (flag.plus || flag.space)
 	{
 		if ((flag.plus || flag.space) && (flag.size.star >= str_len || (-1) * flag.size.star >= str_len))

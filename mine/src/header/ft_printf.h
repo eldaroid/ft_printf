@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 15:38:33 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 21:26:36 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 14:09:12 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ char		ft_symbol(int n);
 size_t		ft_strlen(const char *s);
 int			ft_toupper(int c);
 char		*ft_strdup(const char *src);
-int			ft_print_with_indent(char *str, int size_star, int str_len, int clean);
+int		ft_print_with_indent(char *str, int size_star, int str_len, int clean);
 char		*ft_itoa_base(long long n, int base, t_flag flag);
 char		*ft_itoa_addres(unsigned long long n, t_flag flag);
 char		*ft_itoa(int n);

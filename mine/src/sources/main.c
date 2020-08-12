@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:22:43 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/12 13:12:25 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 15:06:45 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,22 @@ int     main(void)
 // int i =  printf("% hZ\n");
 // int j =  ft_printf("% hZ\n");
 
-// int j =  ft_printf("@main_ftprintf: %###-#0000 33...12..#0+0d\n", 256);
-// int i =  printf("@main_ftprintf: %###-#0000 33...12..#0+0d\n", 256);
+// int j =  ft_printf("%- 10.#0+d\n", 256);
+// int i =  printf("%- 10.#0+d\n", 256);
 
 // printf("3 = %d\n", i);
 // printf("4 = %d\n", j);
+// ft_printf("%-+10.5d", 4242);
+// printf("%-+10.5d", 4242);z
 
-ft_printf("%d", -1);
+
+// int k =  ft_printf("%-+10.5d\n", 4242);
+// int l =  printf("%-+10.5d\n", 4242);
+
+// printf("3 = %d\n", k);
+// printf("4 = %d\n", l);
+
+// ft_printf("%d", -1);
 
 // ft_printf("%Z");
 // printf("%Z");
