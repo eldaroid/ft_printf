@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/30 18:10:19 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 21:56:40 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 13:08:12 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ int				division_by_type(int type, va_list list, t_flag flag, int count)
 	else if (type == 's')
 		count += ft_print_string(list, flag);
 	else if (type == 'f')
-		count += ft_print_float(list,flag);
+	{
+		// (flag.length.l == 0 || flag.length.ll == 0) ? col_f(flag, va_arg(list, double)) : col_lf(flag, va_arg(list, double));
+		count += ft_print_float(list, flag);
+	}
 	else if (type == 'o')
 	{
 		flag.type = 'o';

@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 17:42:07 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/09 18:35:28 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 12:38:36 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		ft_print_float(va_list list,t_flag flag)
 	char	*str;
 	long long	str_len;
 	int			k;
-	
+
 	number = va_arg(list, double);
 
 	str = ft_string_float(number,flag);

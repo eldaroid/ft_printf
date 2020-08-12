@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:22:43 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 21:56:49 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 13:12:25 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ int     main(void)
 
 // printf("3 = %d\n", i);
 // printf("4 = %d\n", j);
+
+ft_printf("%d", -1);
 
 // ft_printf("%Z");
 // printf("%Z");

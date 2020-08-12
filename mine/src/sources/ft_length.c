@@ -13,6 +13,8 @@ long long int		ft_length_int(va_list list, t_flag flag)
 		nbr = (short int)nbr;
 	else if (flag.length.hh == 1)
 		nbr = (char)nbr;
+	else
+		nbr = (int)nbr;
 	return (nbr);
 }
 
@@ -29,5 +31,7 @@ unsigned long long int		ft_length_uint(va_list list, t_flag flag)
 		nbr = (unsigned long int)nbr;
 	else if (flag.length.ll == 1)
 		nbr = (unsigned long long int)nbr;
+	else
+		nbr = (unsigned int)nbr;
 	return (nbr);
 }
