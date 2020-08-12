@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:39:12 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/12 15:56:05 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 20:31:21 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int		ft_print_with_int(char *str, int size_star, int str_len, int clean, t_flag 
 			write(1, " ", 1);
 			count++;
 		}
-		if (flag.plus == 1 && flag.length.minus == -1 && flag.minus_plus != 2)
+		if (flag.plus == 1 && flag.minus_plus != 2 && str[0] != '-')
 			count++;
 		count += str_len;
 	}
@@ -81,14 +81,14 @@ int			ft_print_integer(va_list list, t_flag flag)
 		flag.size.star = flag.size.zero;
 	if (flag.plus == 1 && !flag.star)
 		flag.size.star = flag.size.plus;
-	k = (flag.plus == 1) ? flag.size.star - 1: flag.size.star;
+	k = (flag.plus == 1 && i > 0) ? flag.size.star - 1: flag.size.star;
 	while (k-- > str_len)
 		write(1, " ", 1);
 	if (flag.plus == 1 && i >= 0)
 	{
 		if (i >= 0)
 			write(1, "+", 1);
-		if (flag.star == 1)
+		if (flag.star == 1 && flag.length.minus == -1)
 			flag.size.star++;
 	}
 	str_len = (flag.length.minus == -1) ? ft_print_with_int(str, flag.size.star, str_len, 1, flag) : ft_print_with_indent(str, flag.size.star, str_len, 1);
@@ -102,7 +102,8 @@ int			ft_print_integer(va_list list, t_flag flag)
 	if (flag.minus_plus == 2)
 	{
 		k = (flag.size.plus > flag.size.star) ? flag.size.plus: flag.size.star;
-		
+		if (i < 0)
+			k++;
 		while (--k > str_len)
 			write(1, " ", 1);
 		str_len = (flag.size.plus > flag.size.star) ? flag.size.plus : flag.size.star;

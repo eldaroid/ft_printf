@@ -18,7 +18,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -c -g
 
-.PHONY = all clean fclean re create_libt
+.PHONY = all clean fclean re create_libt6
 
 all: $(NAME)
 

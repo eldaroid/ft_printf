@@ -54,61 +54,61 @@ Test 152 (notrequired_s_undefbehav_4_flags_sp_zero_lj_as_trunc) : FAILED.
       expected (nonprintable as hex) : "hi l  "
       actual   (nonprintable as hex) : "hi l"
 
-Test 784 (bonus_as_d_prec_width_fit_fit_neg) : FAILED.
-    First line of code: {return test("%+10.5d", -216);}
-      expected output : "    -00216"
-      your output     : "   -00216"
-      expected (nonprintable as hex) : "    -00216"
-      actual   (nonprintable as hex) : "   -00216"
+Test 777 (bonus_as_d_width_zero) : FAILED.
+    First line of code: {return test("%+7d", 0);}
+      expected output : "     +0"
+      your output     : "      +0"
+      expected (nonprintable as hex) : "     +0"
+      actual   (nonprintable as hex) : "      +0"
 
-Test 787 (bonus_as_d_prec_width_nofit_fit_neg) : FAILED.
-    First line of code: {return test("%+8.3d", -8473);}
-      expected output : "   -8473"
-      your output     : "  -8473"
-      expected (nonprintable as hex) : "   -8473"
-      actual   (nonprintable as hex) : "  -8473"
+Test 785 (bonus_as_d_prec_width_fit_fit_zero) : FAILED.
+    First line of code: {return test("%+8.5d", 0);}
+      expected output : "  +00000"
+      your output     : "   +00000"
+      expected (nonprintable as hex) : "  +00000"
+      actual   (nonprintable as hex) : "   +00000"
 
-Test 802 (bonus_as_d_prec_width_ff_neg_zp) : FAILED.
-    First line of code: {return test("%0+10.5d", -216);}
-      expected output : "    -00216"
-      your output     : "   -00216"
-      expected (nonprintable as hex) : "    -00216"
-      actual   (nonprintable as hex) : "   -00216"
+Test 803 (bonus_as_d_prec_width_ff_zero_zp) : FAILED.
+    First line of code: {return test("%0+8.5d", 0);}
+      expected output : "  +00000"
+      your output     : "   +00000"
+      expected (nonprintable as hex) : "  +00000"
+      actual   (nonprintable as hex) : "   +00000"
 
-Test 805 (bonus_as_d_prec_width_nf_neg_zp) : FAILED.
-    First line of code: {return test("%0+8.3d", -8473);}
-      expected output : "   -8473"
-      your output     : "  -8473"
-      expected (nonprintable as hex) : "   -8473"
-      actual   (nonprintable as hex) : "  -8473"
+Test 825 (bonus_as_i_width_zero) : FAILED.
+    First line of code: {return test("%+7i", 0);}
+      expected output : "     +0"
+      your output     : "      +0"
+      expected (nonprintable as hex) : "     +0"
+      actual   (nonprintable as hex) : "      +0"
 
-Test 837 (bonus_as_i_prec_width_fit_fit_neg) : FAILED.
-    First line of code: {return test("%+10.5i", -216);}
-      expected output : "    -00216"
-      your output     : "   -00216"
-      expected (nonprintable as hex) : "    -00216"
-      actual   (nonprintable as hex) : "   -00216"
+Test 832 (bonus_as_i_prec0val0_was) : FAILED.
+    First line of code: {return test("%+5.0i", 0);}
+      expected output : "    +"
+      your output     : "     +"
+      expected (nonprintable as hex) : "    +"
+      actual   (nonprintable as hex) : "     +"
 
-Test 840 (bonus_as_i_prec_width_nofit_fit_neg) : FAILED.
-    First line of code: {return test("%+8.3i", -8473);}
-      expected output : "   -8473"
-      your output     : "  -8473"
-      expected (nonprintable as hex) : "   -8473"
-      actual   (nonprintable as hex) : "  -8473"
+Test 833 (bonus_as_i_prec0val0_was_impl) : FAILED.
+    First line of code: {return test("%+5.i", 0);}
+      expected output : "    +"
+      your output     : "     +"
+      expected (nonprintable as hex) : "    +"
+      actual   (nonprintable as hex) : "     +"
 
-Test 846 (bonus_as_i_prec_width_ff_neg_zp) : FAILED.
-    First line of code: {return test("%0+10.5i", -216);}
-      expected output : "    -00216"
-      your output     : "   -00216"
-      expected (nonprintable as hex) : "    -00216"
-      actual   (nonprintable as hex) : "   -00216"
+Test 838 (bonus_as_i_prec_width_fit_fit_zero) : FAILED.
+    First line of code: {return test("%+8.5i", 0);}
+      expected output : "  +00000"
+      your output     : "   +00000"
+      expected (nonprintable as hex) : "  +00000"
+      actual   (nonprintable as hex) : "   +00000"
 
-Test 849 (bonus_as_i_prec_width_nf_neg_zp) : FAILED.
-    First line of code: {return test("%0+8.3i", -8473);}
-      expected output : "   -8473"
-      your output     : "  -8473"
-      expected (nonprintable as hex) : "   -8473"
-      actual   (nonprintable as hex) : "  -8473"
+Test 847 (bonus_as_i_prec_width_ff_zero_zp) : FAILED.
+    First line of code: {return test("%0+8.5i", 0);}
+      expected output : "  +00000"
+      your output     : "   +00000"
+      expected (nonprintable as hex) : "  +00000"
+      actual   (nonprintable as hex) : "   +00000"
 
 Test 893 (bonus_sp_d_width_pos_fits) : FAILED.
     First line of code: {return test("% 7d", 33);}
@@ -334,61 +334,61 @@ Test 1024 (bonus_sp_i_prec_width_nf_pos_ljzpsp_ignoreflag) : FAILED.
       expected (nonprintable as hex) : " 8375   "
       actual   (nonprintable as hex) : " 8375    "
 
-Test 1151 (bonus_assp_d_prec_width_fit_fit_neg_ignoreflag) : FAILED.
-    First line of code: {return test("% +10.5d", -216);}
-      expected output : "    -00216"
-      your output     : "   -00216"
-      expected (nonprintable as hex) : "    -00216"
-      actual   (nonprintable as hex) : "   -00216"
+Test 1143 (bonus_assp_d_width_zero_ignoreflag) : FAILED.
+    First line of code: {return test("% +7d", 0);}
+      expected output : "     +0"
+      your output     : "      +0"
+      expected (nonprintable as hex) : "     +0"
+      actual   (nonprintable as hex) : "      +0"
 
-Test 1154 (bonus_assp_d_prec_width_nofit_fit_neg_ignoreflag) : FAILED.
-    First line of code: {return test("% +8.3d", -8473);}
-      expected output : "   -8473"
-      your output     : "  -8473"
-      expected (nonprintable as hex) : "   -8473"
-      actual   (nonprintable as hex) : "  -8473"
+Test 1152 (bonus_assp_d_prec_width_fit_fit_zero_ignoreflag) : FAILED.
+    First line of code: {return test("% +8.5d", 0);}
+      expected output : "  +00000"
+      your output     : "   +00000"
+      expected (nonprintable as hex) : "  +00000"
+      actual   (nonprintable as hex) : "   +00000"
 
-Test 1173 (bonus_assp_d_prec_width_ff_neg_aszpsp_ignoreflag) : FAILED.
-    First line of code: {return test("% 0+10.5d", -216);}
-      expected output : "    -00216"
-      your output     : "   -00216"
-      expected (nonprintable as hex) : "    -00216"
-      actual   (nonprintable as hex) : "   -00216"
+Test 1159 (bonus_assp_d_prec0val0_was) : FAILED.
+    First line of code: {return test("%+5.0d", 0);}
+      expected output : "    +"
+      your output     : "     +"
+      expected (nonprintable as hex) : "    +"
+      actual   (nonprintable as hex) : "     +"
 
-Test 1176 (bonus_assp_d_prec_width_nf_neg_aszpsp_ignoreflag) : FAILED.
-    First line of code: {return test("% 0+8.3d", -8473);}
-      expected output : "   -8473"
-      your output     : "  -8473"
-      expected (nonprintable as hex) : "   -8473"
-      actual   (nonprintable as hex) : "  -8473"
+Test 1160 (bonus_assp_d_prec0val0_was_impl) : FAILED.
+    First line of code: {return test("%+5.d", 0);}
+      expected output : "    +"
+      your output     : "     +"
+      expected (nonprintable as hex) : "    +"
+      actual   (nonprintable as hex) : "     +"
 
-Test 1202 (bonus_assp_i_prec_width_fit_fit_neg_ignoreflag) : FAILED.
-    First line of code: {return test("% +10.5i", -216);}
-      expected output : "    -00216"
-      your output     : "   -00216"
-      expected (nonprintable as hex) : "    -00216"
-      actual   (nonprintable as hex) : "   -00216"
+Test 1174 (bonus_assp_d_prec_width_ff_zero_aszpsp_ignoreflag) : FAILED.
+    First line of code: {return test("% 0+8.5d", 0);}
+      expected output : "  +00000"
+      your output     : "   +00000"
+      expected (nonprintable as hex) : "  +00000"
+      actual   (nonprintable as hex) : "   +00000"
 
-Test 1205 (bonus_assp_i_prec_width_nofit_fit_neg_ignoreflag) : FAILED.
-    First line of code: {return test("% +8.3i", -8473);}
-      expected output : "   -8473"
-      your output     : "  -8473"
-      expected (nonprintable as hex) : "   -8473"
-      actual   (nonprintable as hex) : "  -8473"
+Test 1194 (bonus_assp_i_width_zero_ignoreflag) : FAILED.
+    First line of code: {return test("% +7i", 0);}
+      expected output : "     +0"
+      your output     : "      +0"
+      expected (nonprintable as hex) : "     +0"
+      actual   (nonprintable as hex) : "      +0"
 
-Test 1220 (bonus_assp_i_prec_width_ff_neg_aszpsp_ignoreflag) : FAILED.
-    First line of code: {return test("% 0+10.5i", -216);}
-      expected output : "    -00216"
-      your output     : "   -00216"
-      expected (nonprintable as hex) : "    -00216"
-      actual   (nonprintable as hex) : "   -00216"
+Test 1203 (bonus_assp_i_prec_width_fit_fit_zero_ignoreflag) : FAILED.
+    First line of code: {return test("% +8.5i", 0);}
+      expected output : "  +00000"
+      your output     : "   +00000"
+      expected (nonprintable as hex) : "  +00000"
+      actual   (nonprintable as hex) : "   +00000"
 
-Test 1223 (bonus_assp_i_prec_width_nf_neg_aszpsp_ignoreflag) : FAILED.
-    First line of code: {return test("% 0+8.3i", -8473);}
-      expected output : "   -8473"
-      your output     : "  -8473"
-      expected (nonprintable as hex) : "   -8473"
-      actual   (nonprintable as hex) : "  -8473"
+Test 1221 (bonus_assp_i_prec_width_ff_zero_aszpsp_ignoreflag) : FAILED.
+    First line of code: {return test("% 0+8.5i", 0);}
+      expected output : "  +00000"
+      your output     : "   +00000"
+      expected (nonprintable as hex) : "  +00000"
+      actual   (nonprintable as hex) : "   +00000"
 
 Test 1271 (bonus_length_d_ll_pos_big_width) : FAILED.
     First line of code: {return test("%37lld", 522337203685470ll);}
@@ -911,9 +911,9 @@ Test 2007 (bonus_notrequired_f_overprec_might_be_undefbehav_ndblmin) : FAILED.
 Test 2008 (bonus_notrequired_f_limits_dblmax_prec0) : FAILED.
     First line of code: {return test("%.0f", DBL_MAX);}
       expected output : "179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703"
-      your output     : "00000000000000000000ÿ"
+      your output     : "00000000000000000000"
       expected (nonprintable as hex) : "179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703"
-      actual   (nonprintable as hex) : "00000000000000000000\xff"
+      actual   (nonprintable as hex) : "00000000000000000000"
 
 Test 2009 (bonus_notrequired_f_limits_dblmax_prec3) : FAILED.
     First line of code: {return test("%.3f", DBL_MAX);}

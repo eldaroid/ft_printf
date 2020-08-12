@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:22:43 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/12 18:30:57 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/12 20:31:24 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,45 +43,18 @@ int     main(void)
 // ft_printf("%-+10.5d", 4242);
 // printf("%-+10.5d", 4242);z
 
+// int i = ft_printf("%-0+5d\n", -42);
+// int j = printf("%-0+5d\n", -42);
+
 
 // int k =  ft_printf("%+-10.5d\n", 4242);
 // int l =  printf("%+-10.5d\n", 4242);
 
-// printf("3 = %d\n", k);
-// printf("4 = %d\n", l);
+// printf("3 = %d\n", i);
+// printf("4 = %d\n", j);
 
-// printf("%+d\n", 42);
-// ft_printf("%+d\n", 42);
-
-// int i = ft_printf("%-+10.5d\n", 4242);
-// int j = printf("%-+10.5d\n", 4242);
-
-
-// ft_printf("%d", -1);
-
-// ft_printf("%Z");
-// printf("%Z");
-	
-
-	// 314 tests 6 ./test bonus_f
-
-	// int i = printf("%jx\n", 4294967296);
-	// int j = ft_printf("%jx\n", 4294967296);
-
-	// int i = ft_printf("%010s\n", "this");
-	// int j = printf("%010s\n", "this");
-// ft_printf("%0+5d", -42);
-// ft_printf("%010s is a string", "this");
-// ft_printf("% Z", 42);
-// ft_printf("%");
-// ft_printf("%05c", 42);
-// int i = ft_printf("1%010s is a string\n", "this");
-// int j = printf("2%010s is a string\n", "this");
-//  28. FAIL ft_printf("%5+d", 42);                        -> "  +42"
-//   29. FAIL ft_printf("%5+d", -42);                       -> "  -42"
-//   30. FAIL ft_printf("%-5+d", 42);
-//   32. FAIL ft_printf("%-5+d", -42);
-	// printf("3 = %d\n", i);
-	// printf("4 = %d\n", j);
+// ft_printf("%-5+d", 42);
+// ft_printf("%-5+d", -42);
+// ft_printf("%-0+5d", -42);
     return (0);
 }
