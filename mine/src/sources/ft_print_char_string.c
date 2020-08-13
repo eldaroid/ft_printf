@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:43:44 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/13 17:32:00 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 18:01:50 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,7 @@ int			ft_print_string(va_list list, t_flag flag)
 		str = ft_strdup("(null)");
 		clean = 1;
 	}
-	if (str[0] != (char)NULL)
-		len = ft_strlen(str);
+	len = ft_strlen(str);
 	if (flag.dot && flag.size.dot < len && flag.size.dot >= 0)
 	{
 		len = flag.size.dot;
