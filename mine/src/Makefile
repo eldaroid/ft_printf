@@ -27,6 +27,7 @@ $(NAME): $(OBJS) $(LIBFT_OBJS) $(LIBFT_SRCS) $(LIBFT_HEADER)
 	cp $(LIBFT) .
 	mv $(LIBFT_NAME) $(NAME)
 	ar rc $(NAME) $(OBJS)
+	rm sources/*.o
 
 $(OBJS): $(SRCS) $(HEADER)
 	$(CC) $(CFLAGS) $(SRCS) -I header
