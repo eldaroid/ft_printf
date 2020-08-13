@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:22:43 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/13 19:39:24 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 21:54:05 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int     main(void)
 	// printf("o1 = %#.3o\n", 1);
 	// ft_printf("o2 = %#.3o\n", 1);
 
-// ft_printf("%s", 5);
+ft_printf("%s", 5);
 
 // int i =  printf("% hZ\n");
 // int j =  ft_printf("% hZ\n");
@@ -49,13 +49,13 @@ int     main(void)
 // int j = printf("%-0+5d\n", -42);
 
 
-// int k =  ft_printf("%+-10.5d\n", 4242);
+// ft_printf("%+-10.5d\n", 4242);
 // int l =  printf("%+-10.5d\n", 4242);
 
 // printf("3 = %d\n", i);
 // // printf("4 = %d\n", j);
 // ft_printf("{%Lf}\n", 1.42l);
-// printf("{%f}{%lf}{%Lf}", 1.42, 1.42, 1.42l);
+// ft_printf("{%f}{%lf}{%Lcd f}", 1.42, 1.42, 1.42l);
 // ft_printf("%.12Lf\n\n", LDBL_MAX);
 // printf("%.12Lf", LDBL_MAX);
 // ft_printf("{%Lf}\n", 1444565444646.6465424242242l);
