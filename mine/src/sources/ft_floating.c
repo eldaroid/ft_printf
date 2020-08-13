@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 16:43:45 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/09 19:22:03 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 17:54:29 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_before_dot(double number, int check_dot, t_flag flag, int zero)
 	while ((power - zero) > 0)
 	{
 		power--;
-		str[power - zero] = ft_symbol(((int)number % 10) * sign);
+		str[power - zero] = ft_symbol(((long long int)number % 10) * sign);
 		number = number / 10;
 	}
 	if (sign == -1)
@@ -48,7 +48,7 @@ char	*ft_before_dot(double number, int check_dot, t_flag flag, int zero)
 	return (str);
 }
 
-char	*ft_after_dot(double number, int weight)
+char	*ft_after_dot(long double number, int weight)
 {
 	char	*str;
 	int		power;
@@ -69,22 +69,22 @@ char	*ft_after_dot(double number, int weight)
 	return (str);
 }
 
-double	rounding(double nb, int precision, int sign)
+long double	rounding(long double nb, int precision, int sign)
 {
 	int		i;
-	double	tmp;
+	long double	tmp;
 	
 	if (sign == 0)
 		tmp = nb - (unsigned long int)nb;
 	else
-		tmp = nb - (long int)nb;
+		tmp = nb - (long long int)nb;
 	i = -1;
 	while (++i != precision)
 		tmp *= 10;
 	tmp = (sign) ? tmp - 0.5 : tmp + 0.5;
 	while (--precision >= 0)
 		tmp /= 10;
-	return ((!sign) ? (unsigned long int) nb + tmp : (long int)nb + tmp);
+	return ((!sign) ? (unsigned long int) nb + tmp : (long long int)nb + tmp);
 }
 
 char	*ft_string_float(double nb, t_flag flag)
@@ -92,8 +92,8 @@ char	*ft_string_float(double nb, t_flag flag)
 	char	*before_dot;
 	char	*after_dot;
 	int			precision;
-	double		before_number;
-	double		after_number;
+	long double		before_number;
+	long double		after_number;
 	// char	*str;
 
 	precision = ((flag.size.dot != 0) ? flag.size.dot : 6);

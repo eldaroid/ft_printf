@@ -2068,7 +2068,7 @@ int bonus_length_X_uhmax(void){return ft_printf("%hX", (unsigned short)65535);}
 int bonus_length_X_uhhmax(void){return ft_printf("%hhX", (unsigned char)255);}
 //Hexadecimal uppers of varying size modifiers with some other modifiers
 int bonus_length_X_l_pos_big_zp(void){return ft_printf("%037lX", 22337203685477ul);}
-int bonus_length_X_ll_pos_big_width(void){return ft_printf("%37llX", 522337203685470ull);}
+ int bonus_length_X_ll_pos_big_width(void){return ft_printf("%37llX", 522337203685470ull);}
 //Multiple Hexadecimal uppers in a row of varying sizes
 int bonus_length_X_ll_hh_ll(void){return ft_printf("%llu%hhu%llX", ull_pos_1, uch_pos_1, ull_pos_1);}
 int bonus_length_X_h_l_hh(void){return ft_printf("%hu%lu%hhX", ush_pos_1, ul_pos_1, uch_pos_1);}
@@ -2093,7 +2093,7 @@ int bonus_length_X_uhmax_af(void){return ft_printf("%#hX", (unsigned short)65535
 int bonus_length_X_uhhmax_af(void){return ft_printf("%#hhX", (unsigned char)255);}
 //Hex uppers (altform) of varying size modifiers with some other modifiers
 int bonus_length_X_l_pos_big_zp_af(void){return ft_printf("%#037lX", 22337203685477ul);}
-int bonus_length_X_ll_pos_big_width_af(void){return ft_printf("%#37llX", 522337203685470ull);}
+ int bonus_length_X_ll_pos_big_width_af(void){return ft_printf("%#37llX", 522337203685470ull);}
 //Multiple Hex uppers (altform) in a row of varying sizes
 int bonus_length_X_ll_hh_ll_af(void){return ft_printf("%llu%hhu%#llX", ull_pos_1, uch_pos_1, ull_pos_1);}
 int bonus_length_X_h_l_hh_af(void){return ft_printf("%#hx%lu%#hhX", ush_pos_1, ul_pos_1, uch_pos_1);}
@@ -2584,18 +2584,18 @@ int bonus_f_wsp_prec1n(void){return ft_printf("% 5.1f", -7.3);}
 int bonus_f_wsp_prec3n(void){return ft_printf("% 5.3f", -7.3);}
 int bonus_f_wsp_prec6n(void){return ft_printf("% 5.6f", -7.3);}
 //Floats with field width and zero padding and sp,~
-int bonus_f_wzpsp_prec0p_zero(void){return ft_printf("% 05.0f", 0.0);}
-int bonus_f_wzpsp_prec0p_nzero(void){return ft_printf("% 05.0f", -0.0);}
-int bonus_f_wzpsp_prec3p_zero(void){return ft_printf("% 05.3f", 0.0);}
-int bonus_f_wzpsp_prec3p_nzero(void){return ft_printf("% 05.3f", -0.0);}
-int bonus_f_wzpsp_prec0p(void){return ft_printf("% 05.0f", 7.3);}
-int bonus_f_wzpsp_prec1p(void){return ft_printf("% 05.1f", 7.3);}
-int bonus_f_wzpsp_prec3p(void){return ft_printf("% 05.3f", 7.3);}
-int bonus_f_wzpsp_prec6p(void){return ft_printf("% 05.6f", 7.3);}
-int bonus_f_wzpsp_prec0n(void){return ft_printf("% 05.0f", -7.3);}
-int bonus_f_wzpsp_prec1n(void){return ft_printf("% 05.1f", -7.3);}
-int bonus_f_wzpsp_prec3n(void){return ft_printf("% 05.3f", -7.3);}
-int bonus_f_wzpsp_prec6n(void){return ft_printf("% 05.6f", -7.3);}
+ int bonus_f_wzpsp_prec0p_zero(void){return ft_printf("% 05.0f", 0.0);}
+ int bonus_f_wzpsp_prec0p_nzero(void){return ft_printf("% 05.0f", -0.0);}
+ int bonus_f_wzpsp_prec3p_zero(void){return ft_printf("% 05.3f", 0.0);}
+ int bonus_f_wzpsp_prec3p_nzero(void){return ft_printf("% 05.3f", -0.0);}
+ int bonus_f_wzpsp_prec0p(void){return ft_printf("% 05.0f", 7.3);}
+ int bonus_f_wzpsp_prec1p(void){return ft_printf("% 05.1f", 7.3);}
+ int bonus_f_wzpsp_prec3p(void){return ft_printf("% 05.3f", 7.3);}
+ int bonus_f_wzpsp_prec6p(void){return ft_printf("% 05.6f", 7.3);}
+ int bonus_f_wzpsp_prec0n(void){return ft_printf("% 05.0f", -7.3);}
+ int bonus_f_wzpsp_prec1n(void){return ft_printf("% 05.1f", -7.3);}
+ int bonus_f_wzpsp_prec3n(void){return ft_printf("% 05.3f", -7.3);}
+ int bonus_f_wzpsp_prec6n(void){return ft_printf("% 05.6f", -7.3);}
 //Floats with field width and left justify and sp,~
 int bonus_f_wljsp_prec0p_zero(void){return ft_printf("% -5.0f", 0.0);}
 int bonus_f_wljsp_prec0p_nzero(void){return ft_printf("% -5.0f", -0.0);}
@@ -2706,85 +2706,85 @@ int bonus_notrequired_f_stress_limits_ndblmin_prec12(void){return ft_printf("%.1
 int bonus_notrequired_f_stress_limits_ndblmin_prec16(void){return ft_printf("%.16f", -DBL_MIN);}
 int bonus_notrequired_f_stress_limits_ndblmin_prec18(void){return ft_printf("%.18f", -DBL_MIN);}
  //Floats of special values
-int bonus_notrequired_f_reserved_values_inf(void){double special; *((unsigned long *)(&special)) = DBL_INF;
+ int bonus_notrequired_f_reserved_values_inf(void){double special; *((unsigned long *)(&special)) = DBL_INF;
 	return ft_printf("%f", special);}
-int bonus_notrequired_f_reserved_values_ninf(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
+ int bonus_notrequired_f_reserved_values_ninf(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
 	return ft_printf("%f", special);}
-int bonus_notrequired_f_reserved_values_nan(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
+ int bonus_notrequired_f_reserved_values_nan(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
 	return ft_printf("%f", special);}
-int bonus_notrequired_f_reserved_values_pzero(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
+ int bonus_notrequired_f_reserved_values_pzero(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
 	return ft_printf("%f", special);}
-int bonus_notrequired_f_reserved_values_nzero(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
+ int bonus_notrequired_f_reserved_values_nzero(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
 	return ft_printf("%f", special);}
-int bonus_notrequired_f_reserved_values_inf_6w(void){double special; *((unsigned long *)(&special)) = DBL_INF;
+ int bonus_notrequired_f_reserved_values_inf_6w(void){double special; *((unsigned long *)(&special)) = DBL_INF;
 	return ft_printf("%6f", special);}
-int bonus_notrequired_f_reserved_values_ninf_6w(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
+ int bonus_notrequired_f_reserved_values_ninf_6w(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
 	return ft_printf("%6f", special);}
-int bonus_notrequired_f_reserved_values_nan_6w(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
+ int bonus_notrequired_f_reserved_values_nan_6w(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
 	return ft_printf("%6f", special);}
-int bonus_notrequired_f_reserved_values_pzero_6w(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
+ int bonus_notrequired_f_reserved_values_pzero_6w(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
 	return ft_printf("%6f", special);}
-int bonus_notrequired_f_reserved_values_nzero_6w(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
+ int bonus_notrequired_f_reserved_values_nzero_6w(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
 	return ft_printf("%6f", special);}
-int bonus_notrequired_f_reserved_values_inf_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_INF;
+ int bonus_notrequired_f_reserved_values_inf_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_INF;
 	return ft_printf("%-6f", special);}
-int bonus_notrequired_f_reserved_values_ninf_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
+ int bonus_notrequired_f_reserved_values_ninf_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
 	return ft_printf("%-6f", special);}
-int bonus_notrequired_f_reserved_values_nan_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
+ int bonus_notrequired_f_reserved_values_nan_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
 	return ft_printf("%-6f", special);}
-int bonus_notrequired_f_reserved_values_pzero_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
+ int bonus_notrequired_f_reserved_values_pzero_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
 	return ft_printf("%-6f", special);}
-int bonus_notrequired_f_reserved_values_nzero_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
+ int bonus_notrequired_f_reserved_values_nzero_6wlj(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
 	return ft_printf("%-6f", special);}
-int bonus_notrequired_f_reserved_values_inf_6was(void){double special; *((unsigned long *)(&special)) = DBL_INF;
+ int bonus_notrequired_f_reserved_values_inf_6was(void){double special; *((unsigned long *)(&special)) = DBL_INF;
 	return ft_printf("%+6f", special);}
-int bonus_notrequired_f_reserved_values_ninf_6was(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
+ int bonus_notrequired_f_reserved_values_ninf_6was(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
 	return ft_printf("%+6f", special);}
-int bonus_notrequired_f_reserved_values_nan_6was(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
+ int bonus_notrequired_f_reserved_values_nan_6was(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
 	return ft_printf("%+6f", special);}
-int bonus_notrequired_f_reserved_values_pzero_6was(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
+ int bonus_notrequired_f_reserved_values_pzero_6was(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
 	return ft_printf("%+6f", special);}
-int bonus_notrequired_f_reserved_values_nzero_6was(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
+ int bonus_notrequired_f_reserved_values_nzero_6was(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
 	return ft_printf("%+6f", special);}
-int bonus_notrequired_f_reserved_values_inf_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_INF;
+ int bonus_notrequired_f_reserved_values_inf_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_INF;
 	return ft_printf("%10.7f", special);}
-int bonus_notrequired_f_reserved_values_ninf_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
+ int bonus_notrequired_f_reserved_values_ninf_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
 	return ft_printf("%10.7f", special);}
-int bonus_notrequired_f_reserved_values_nan_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
+ int bonus_notrequired_f_reserved_values_nan_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
 	return ft_printf("%10.7f", special);}
-int bonus_notrequired_f_reserved_values_pzero_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
+ int bonus_notrequired_f_reserved_values_pzero_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
 	return ft_printf("%10.7f", special);}
-int bonus_notrequired_f_reserved_values_nzero_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
+ int bonus_notrequired_f_reserved_values_nzero_10w_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
 	return ft_printf("%10.7f", special);}
-int bonus_notrequired_f_reserved_values_inf_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_INF;
+ int bonus_notrequired_f_reserved_values_inf_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_INF;
 	return ft_printf("% .7f", special);}
-int bonus_notrequired_f_reserved_values_ninf_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
+ int bonus_notrequired_f_reserved_values_ninf_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
 	return ft_printf("% .7f", special);}
-int bonus_notrequired_f_reserved_values_nan_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
+ int bonus_notrequired_f_reserved_values_nan_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
 	return ft_printf("% .7f", special);}
-int bonus_notrequired_f_reserved_values_pzero_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
+ int bonus_notrequired_f_reserved_values_pzero_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
 	return ft_printf("% .7f", special);}
-int bonus_notrequired_f_reserved_values_nzero_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
+ int bonus_notrequired_f_reserved_values_nzero_sp_prec7(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
 	return ft_printf("% .7f", special);}
-int bonus_notrequired_f_reserved_values_inf_sp(void){double special; *((unsigned long *)(&special)) = DBL_INF;
+ int bonus_notrequired_f_reserved_values_inf_sp(void){double special; *((unsigned long *)(&special)) = DBL_INF;
 	return ft_printf("% f", special);}
-int bonus_notrequired_f_reserved_values_ninf_sp(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
+ int bonus_notrequired_f_reserved_values_ninf_sp(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
 	return ft_printf("% f", special);}
-int bonus_notrequired_f_reserved_values_nan_sp(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
+ int bonus_notrequired_f_reserved_values_nan_sp(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
 	return ft_printf("% f", special);}
-int bonus_notrequired_f_reserved_values_pzero_sp(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
+ int bonus_notrequired_f_reserved_values_pzero_sp(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
 	return ft_printf("% f", special);}
-int bonus_notrequired_f_reserved_values_nzero_sp(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
+ int bonus_notrequired_f_reserved_values_nzero_sp(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
 	return ft_printf("% f", special);}
-int bonus_notrequired_f_reserved_values_inf_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_INF;
+ int bonus_notrequired_f_reserved_values_inf_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_INF;
 	return ft_printf("%06f", special);}
-int bonus_notrequired_f_reserved_values_ninf_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
+ int bonus_notrequired_f_reserved_values_ninf_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_NINF;
 	return ft_printf("%06f", special);}
-int bonus_notrequired_f_reserved_values_nan_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
+ int bonus_notrequired_f_reserved_values_nan_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_NAN;
 	return ft_printf("%06f", special);}
-int bonus_notrequired_f_reserved_values_pzero_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
+ int bonus_notrequired_f_reserved_values_pzero_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_PZERO;
 	return ft_printf("%06f", special);}
-int bonus_notrequired_f_reserved_values_nzero_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
+ int bonus_notrequired_f_reserved_values_nzero_6wzp(void){double special; *((unsigned long *)(&special)) = DBL_NZERO;
 	return ft_printf("%06f", special);}
 
 
@@ -5070,85 +5070,85 @@ int notinsubject_f_L_stress_prec20_rndd(void){return ft_printf("%.20f",        1
 int notinsubject_f_L_stress_prec20_limits_tiny(void){return ft_printf("%.20f", 0.000000000000000000010);}
 int notinsubject_f_L_stress_prec20_limits_big(void){return ft_printf("%.20f",  0.999999999999999999990);}
 //Long Doubles of special values
-int notinsubject_f_L_reserved_values_inf(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
+ int notinsubject_f_L_reserved_values_inf(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
 	return ft_printf("%Lf", special);}
-int notinsubject_f_L_reserved_values_ninf(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_ninf(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%Lf", special);}
-int notinsubject_f_L_reserved_values_nan(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_nan(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%Lf", special);}
-int notinsubject_f_L_reserved_values_pzero(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_pzero(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%Lf", special);}
-int notinsubject_f_L_reserved_values_nzero(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_nzero(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%Lf", special);}
-int notinsubject_f_L_reserved_values_inf_6w(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
+ int notinsubject_f_L_reserved_values_inf_6w(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
 	return ft_printf("%6Lf", special);}
-int notinsubject_f_L_reserved_values_ninf_6w(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_ninf_6w(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%6Lf", special);}
-int notinsubject_f_L_reserved_values_nan_6w(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_nan_6w(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%6Lf", special);}
-int notinsubject_f_L_reserved_values_pzero_6w(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_pzero_6w(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%6Lf", special);}
-int notinsubject_f_L_reserved_values_nzero_6w(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_nzero_6w(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%6Lf", special);}
-int notinsubject_f_L_reserved_values_inf_6wlj(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
+ int notinsubject_f_L_reserved_values_inf_6wlj(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
 	return ft_printf("%-6Lf", special);}
-int notinsubject_f_L_reserved_values_ninf_6wlj(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_ninf_6wlj(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%-6Lf", special);}
-int notinsubject_f_L_reserved_values_nan_6wlj(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_nan_6wlj(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%-6Lf", special);}
-int notinsubject_f_L_reserved_values_pzero_6wlj(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_pzero_6wlj(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%-6Lf", special);}
-int notinsubject_f_L_reserved_values_nzero_6wlj(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_nzero_6wlj(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%-6Lf", special);}
-int notinsubject_f_L_reserved_values_inf_6was(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
+ int notinsubject_f_L_reserved_values_inf_6was(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
 	return ft_printf("%+6Lf", special);}
-int notinsubject_f_L_reserved_values_ninf_6was(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_ninf_6was(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%+6Lf", special);}
-int notinsubject_f_L_reserved_values_nan_6was(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_nan_6was(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%+6Lf", special);}
-int notinsubject_f_L_reserved_values_pzero_6was(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_pzero_6was(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%+6Lf", special);}
-int notinsubject_f_L_reserved_values_nzero_6was(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_nzero_6was(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%+6Lf", special);}
-int notinsubject_f_L_reserved_values_inf_10w_prec7(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;  FTPF_LDBL_BYTE5(special) = 0x7FFF;
+ int notinsubject_f_L_reserved_values_inf_10w_prec7(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;  FTPF_LDBL_BYTE5(special) = 0x7FFF;
 	return ft_printf("%10.7Lf", special);}
-int notinsubject_f_L_reserved_values_ninf_10w_prec7(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_ninf_10w_prec7(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%10.7Lf", special);}
-int notinsubject_f_L_reserved_values_nan_10w_prec7(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_nan_10w_prec7(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%10.7Lf", special);}
-int notinsubject_f_L_reserved_values_pzero_10w_prec7(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_pzero_10w_prec7(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%10.7Lf", special);}
-int notinsubject_f_L_reserved_values_nzero_10w_prec7(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_nzero_10w_prec7(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%10.7Lf", special);}
-int notinsubject_f_L_reserved_values_inf_sp_prec7(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;  FTPF_LDBL_BYTE5(special) = 0x7FFF;
+ int notinsubject_f_L_reserved_values_inf_sp_prec7(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;  FTPF_LDBL_BYTE5(special) = 0x7FFF;
 	return ft_printf("% .7Lf", special);}
-int notinsubject_f_L_reserved_values_ninf_sp_prec7(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_ninf_sp_prec7(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("% .7Lf", special);}
-int notinsubject_f_L_reserved_values_nan_sp_prec7(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_nan_sp_prec7(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("% .7Lf", special);}
-int notinsubject_f_L_reserved_values_pzero_sp_prec7(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_pzero_sp_prec7(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("% .7Lf", special);}
-int notinsubject_f_L_reserved_values_nzero_sp_prec7(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_nzero_sp_prec7(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("% .7Lf", special);}
-int notinsubject_f_L_reserved_values_inf_sp(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
+ int notinsubject_f_L_reserved_values_inf_sp(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
 	return ft_printf("% Lf", special);}
-int notinsubject_f_L_reserved_values_ninf_sp(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_ninf_sp(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("% Lf", special);}
-int notinsubject_f_L_reserved_values_nan_sp(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_nan_sp(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("% Lf", special);}
-int notinsubject_f_L_reserved_values_pzero_sp(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_pzero_sp(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("% Lf", special);}
-int notinsubject_f_L_reserved_values_nzero_sp(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_nzero_sp(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("% Lf", special);}
-int notinsubject_f_L_reserved_values_inf_6wzp(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
+ int notinsubject_f_L_reserved_values_inf_6wzp(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;
 	return ft_printf("%06Lf", special);}
-int notinsubject_f_L_reserved_values_ninf_6wzp(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_ninf_6wzp(void){long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%06Lf", special);}
-int notinsubject_f_L_reserved_values_nan_6wzp(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
+ int notinsubject_f_L_reserved_values_nan_6wzp(void){long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;
 	return ft_printf("%06Lf", special);}
-int notinsubject_f_L_reserved_values_pzero_6wzp(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_pzero_6wzp(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%06Lf", special);}
-int notinsubject_f_L_reserved_values_nzero_6wzp(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
+ int notinsubject_f_L_reserved_values_nzero_6wzp(void){long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;
 	return ft_printf("%06Lf", special);}
 ///Long double Floats whose precision exceeds their compiled literal precision
 int notinsubject_f_L_overprec_might_be_undefbehav_100(void){return ft_printf("%.100Lf", 0.237l);}
@@ -5164,30 +5164,30 @@ int notinsubject_f_L_limits_dblmax_prec0(void){return ft_printf("%.0Lf", LDBL_MA
 int notinsubject_f_L_limits_dblmax_prec3(void){return ft_printf("%.3Lf", LDBL_MAX);}
 int notinsubject_f_L_limits_dblmax_precd(void){return ft_printf("%Lf", LDBL_MAX);}
 int notinsubject_f_L_limits_dblmax_prec8(void){return ft_printf("%.8Lf", LDBL_MAX);}
-int notinsubject_f_L_stress_limits_dblmax_prec12(void){return ft_printf("%.12Lf", LDBL_MAX);}
-int notinsubject_f_L_stress_limits_dblmax_prec16(void){return ft_printf("%.16Lf", LDBL_MAX);}
-int notinsubject_f_L_stress_limits_dblmax_prec18(void){return ft_printf("%.18Lf", LDBL_MAX);}
+ int notinsubject_f_L_stress_limits_dblmax_prec12(void){return ft_printf("%.12Lf", LDBL_MAX);}
+ int notinsubject_f_L_stress_limits_dblmax_prec16(void){return ft_printf("%.16Lf", LDBL_MAX);}
+ int notinsubject_f_L_stress_limits_dblmax_prec18(void){return ft_printf("%.18Lf", LDBL_MAX);}
 int notinsubject_f_L_limits_ndblmax_prec0(void){return ft_printf("%.0Lf", -LDBL_MAX);}
 int notinsubject_f_L_limits_ndblmax_prec3(void){return ft_printf("%.3Lf", -LDBL_MAX);}
 int notinsubject_f_L_limits_ndblmax_precd(void){return ft_printf("%Lf", -LDBL_MAX);}
 int notinsubject_f_L_limits_ndblmax_prec8(void){return ft_printf("%.8Lf", -LDBL_MAX);}
-int notinsubject_f_L_stress_limits_ndblmax_prec12(void){return ft_printf("%.12Lf", -LDBL_MAX);}
-int notinsubject_f_L_stress_limits_ndblmax_prec16(void){return ft_printf("%.16Lf", -LDBL_MAX);}
-int notinsubject_f_L_stress_limits_ndblmax_prec18(void){return ft_printf("%.18Lf", -LDBL_MAX);}
+ int notinsubject_f_L_stress_limits_ndblmax_prec12(void){return ft_printf("%.12Lf", -LDBL_MAX);}
+ int notinsubject_f_L_stress_limits_ndblmax_prec16(void){return ft_printf("%.16Lf", -LDBL_MAX);}
+ int notinsubject_f_L_stress_limits_ndblmax_prec18(void){return ft_printf("%.18Lf", -LDBL_MAX);}
 int notinsubject_f_L_limits_dblmin_prec0(void){return ft_printf("%.0Lf", LDBL_MIN);}
 int notinsubject_f_L_limits_dblmin_prec3(void){return ft_printf("%.3Lf", LDBL_MIN);}
 int notinsubject_f_L_limits_dblmin_precd(void){return ft_printf("%Lf", LDBL_MIN);}
 int notinsubject_f_L_limits_dblmin_prec8(void){return ft_printf("%.8Lf", LDBL_MIN);}
-int notinsubject_f_L_stress_limits_dblmin_prec12(void){return ft_printf("%.12Lf", LDBL_MIN);}
-int notinsubject_f_L_stress_limits_dblmin_prec16(void){return ft_printf("%.16Lf", LDBL_MIN);}
-int notinsubject_f_L_stress_limits_dblmin_prec18(void){return ft_printf("%.18Lf", LDBL_MIN);}
+ int notinsubject_f_L_stress_limits_dblmin_prec12(void){return ft_printf("%.12Lf", LDBL_MIN);}
+ int notinsubject_f_L_stress_limits_dblmin_prec16(void){return ft_printf("%.16Lf", LDBL_MIN);}
+ int notinsubject_f_L_stress_limits_dblmin_prec18(void){return ft_printf("%.18Lf", LDBL_MIN);}
 int notinsubject_f_L_limits_ndblmin_prec0(void){return ft_printf("%.0Lf", -LDBL_MIN);}
 int notinsubject_f_L_limits_ndblmin_prec3(void){return ft_printf("%.3Lf", -LDBL_MIN);}
 int notinsubject_f_L_limits_ndblmin_precd(void){return ft_printf("%Lf", -LDBL_MIN);}
 int notinsubject_f_L_limits_ndblmin_prec8(void){return ft_printf("%.8Lf", -LDBL_MIN);}
-int notinsubject_f_L_stress_limits_ndblmin_prec12(void){return ft_printf("%.12Lf", -LDBL_MIN);}
-int notinsubject_f_L_stress_limits_ndblmin_prec16(void){return ft_printf("%.16Lf", -LDBL_MIN);}
-int notinsubject_f_L_stress_limits_ndblmin_prec18(void){return ft_printf("%.18Lf", -LDBL_MIN);}
+ int notinsubject_f_L_stress_limits_ndblmin_prec12(void){return ft_printf("%.12Lf", -LDBL_MIN);}
+ int notinsubject_f_L_stress_limits_ndblmin_prec16(void){return ft_printf("%.16Lf", -LDBL_MIN);}
+ int notinsubject_f_L_stress_limits_ndblmin_prec18(void){return ft_printf("%.18Lf", -LDBL_MIN);}
 
 
 /* -----------------------------------------------------------------------------
@@ -5289,7 +5289,7 @@ int notinsubject_o_uhmax(void){return ft_printf("%ho", (unsigned short)65535);}
 int notinsubject_o_uhhmax(void){return ft_printf("%hho", (unsigned char)255);}
 //Octals of varying size modifiers with some other modifiers
 int notinsubject_o_l_pos_big_zp(void){return ft_printf("%037lo", 22337203685477ul);}
-int notinsubject_o_ll_pos_big_width(void){return ft_printf("%37llo", 522337203685470ull);}
+ int notinsubject_o_ll_pos_big_width(void){return ft_printf("%37llo", 522337203685470ull);}
 //Multiple Octals in a row of varying sizes
 int notinsubject_o_ll_hh_ll(void){return ft_printf("%llu%hhu%llo", ull_pos_1, uch_pos_1, ull_pos_1);}
 int notinsubject_o_h_l_hh(void){return ft_printf("%hu%lu%hho", ush_pos_1, ul_pos_1, uch_pos_1);}
@@ -5360,7 +5360,7 @@ int notinsubject_o_uhmax_af(void){return ft_printf("%#ho", (unsigned short)65535
 int notinsubject_o_uhhmax_af(void){return ft_printf("%#hho", (unsigned char)255);}
 //Octal (Altform)s of varying size modifiers with some other modifiers
 int notinsubject_o_l_pos_big_zp_af(void){return ft_printf("%#037lo", 22337203685477ul);}
-int notinsubject_o_ll_pos_big_width_af(void){return ft_printf("%#37llo", 522337203685470ull);}
+ int notinsubject_o_ll_pos_big_width_af(void){return ft_printf("%#37llo", 522337203685470ull);}
 //Multiple Octal (Altform)s in a row of varying sizes
 int notinsubject_o_ll_hh_ll_af(void){return ft_printf("%llu%hhu%#llo", ull_pos_1, uch_pos_1, ull_pos_1);}
 int notinsubject_o_h_l_hh_af(void){return ft_printf("%hu%lu%#hho", ush_pos_1, ul_pos_1, uch_pos_1);}
@@ -5447,7 +5447,7 @@ int notinsubject_moul_o_hash_8(void){return ft_printf("%%o INT_MIN ==  %o\n", IN
 int notinsubject_moul_widechar_mix2_throwswarning(void){return ft_printf("Lalalala, %d%% des gens qui parlent %C Ly adorent %s. Ou Presque. %d, %u, %X, %c", 100, L'à', "Ly", 2, 10, 10000, '\n', "ôHohoho");}
 int notinsubject_moul_widechar_basic1(void){wchar_t c = L'\x82'; return ft_printf("%C\n", c);}
 int notinsubject_moul_widechar_basic2(void){return ft_printf("%C\n", L'ø');}
-int notinsubject_moul_widestr_basic2(void){wchar_t wz[3] = L"@@"; return ft_printf("%ls", wz);}
+ int notinsubject_moul_widestr_basic2(void){wchar_t wz[3] = L"@@"; return ft_printf("%ls", wz);}
  //D - Moulinette
  int notinsubject_moul_D_1_notmandatory(void){return ft_printf("%D", 42);}
  int notinsubject_moul_D_2_notmandatory(void){return ft_printf("Kashim a %D histoires à raconter", 1001);}
@@ -5466,38 +5466,38 @@ int notinsubject_moul_widestr_basic2(void){wchar_t wz[3] = L"@@"; return ft_prin
 ** 						ROUND HALF TO EVEN
 ** ---------------------------------------------------------------------------*/
 // %f round half to even
-int bonus_f_rnd_half_to_even_01(void){return ft_printf("%.0f", -5.5);}
-int bonus_f_rnd_half_to_even_02(void){return ft_printf("%.0f", -4.5);}
-int bonus_f_rnd_half_to_even_03(void){return ft_printf("%.0f", -3.5);}
-int bonus_f_rnd_half_to_even_04(void){return ft_printf("%.0f", -2.5);}
-int bonus_f_rnd_half_to_even_05(void){return ft_printf("%.0f", -1.5);}
-int bonus_f_rnd_half_to_even_06(void){return ft_printf("%.0f", -0.5);}
-int bonus_f_rnd_half_to_even_07(void){return ft_printf("%.0f", 0.5);}
-int bonus_f_rnd_half_to_even_08(void){return ft_printf("%.0f", 1.5);}
-int bonus_f_rnd_half_to_even_09(void){return ft_printf("%.0f", 2.5);}
-int bonus_f_rnd_half_to_even_10(void){return ft_printf("%.0f", 3.5);}
-int bonus_f_rnd_half_to_even_11(void){return ft_printf("%.0f", 4.5);}
-int bonus_f_rnd_half_to_even_12(void){return ft_printf("%.0f", 5.5);}
-int bonus_f_rnd_half_to_even_13(void){return ft_printf("%.3f", -1.2305);}
-int bonus_f_rnd_half_to_even_14(void){return ft_printf("%.3f", -1.2315);}
-int bonus_f_rnd_half_to_even_15(void){return ft_printf("%.3f", -1.2325);}
-int bonus_f_rnd_half_to_even_16(void){return ft_printf("%.3f", -1.2335);}
-int bonus_f_rnd_half_to_even_17(void){return ft_printf("%.3f", -1.2345);}
-int bonus_f_rnd_half_to_even_18(void){return ft_printf("%.3f", -1.2355);}
-int bonus_f_rnd_half_to_even_19(void){return ft_printf("%.3f", -1.2365);}
-int bonus_f_rnd_half_to_even_20(void){return ft_printf("%.3f", -1.2375);}
-int bonus_f_rnd_half_to_even_21(void){return ft_printf("%.3f", -1.2385);}
-int bonus_f_rnd_half_to_even_22(void){return ft_printf("%.3f", -1.2395);}
-int bonus_f_rnd_half_to_even_24(void){return ft_printf("%.3f", 1.2305);}
-int bonus_f_rnd_half_to_even_25(void){return ft_printf("%.3f", 1.2315);}
-int bonus_f_rnd_half_to_even_26(void){return ft_printf("%.3f", 1.2325);}
-int bonus_f_rnd_half_to_even_27(void){return ft_printf("%.3f", 1.2335);}
-int bonus_f_rnd_half_to_even_28(void){return ft_printf("%.3f", 1.2345);}
-int bonus_f_rnd_half_to_even_29(void){return ft_printf("%.3f", 1.2355);}
-int bonus_f_rnd_half_to_even_30(void){return ft_printf("%.3f", 1.2365);}
-int bonus_f_rnd_half_to_even_31(void){return ft_printf("%.3f", 1.2375);}
-int bonus_f_rnd_half_to_even_32(void){return ft_printf("%.3f", 1.2385);}
-int bonus_f_rnd_half_to_even_33(void){return ft_printf("%.3f", 1.2395);}
+ int bonus_f_rnd_half_to_even_01(void){return ft_printf("%.0f", -5.5);}
+ int bonus_f_rnd_half_to_even_02(void){return ft_printf("%.0f", -4.5);}
+ int bonus_f_rnd_half_to_even_03(void){return ft_printf("%.0f", -3.5);}
+ int bonus_f_rnd_half_to_even_04(void){return ft_printf("%.0f", -2.5);}
+ int bonus_f_rnd_half_to_even_05(void){return ft_printf("%.0f", -1.5);}
+ int bonus_f_rnd_half_to_even_06(void){return ft_printf("%.0f", -0.5);}
+ int bonus_f_rnd_half_to_even_07(void){return ft_printf("%.0f", 0.5);}
+ int bonus_f_rnd_half_to_even_08(void){return ft_printf("%.0f", 1.5);}
+ int bonus_f_rnd_half_to_even_09(void){return ft_printf("%.0f", 2.5);}
+ int bonus_f_rnd_half_to_even_10(void){return ft_printf("%.0f", 3.5);}
+ int bonus_f_rnd_half_to_even_11(void){return ft_printf("%.0f", 4.5);}
+ int bonus_f_rnd_half_to_even_12(void){return ft_printf("%.0f", 5.5);}
+ int bonus_f_rnd_half_to_even_13(void){return ft_printf("%.3f", -1.2305);}
+ int bonus_f_rnd_half_to_even_14(void){return ft_printf("%.3f", -1.2315);}
+ int bonus_f_rnd_half_to_even_15(void){return ft_printf("%.3f", -1.2325);}
+ int bonus_f_rnd_half_to_even_16(void){return ft_printf("%.3f", -1.2335);}
+ int bonus_f_rnd_half_to_even_17(void){return ft_printf("%.3f", -1.2345);}
+ int bonus_f_rnd_half_to_even_18(void){return ft_printf("%.3f", -1.2355);}
+ int bonus_f_rnd_half_to_even_19(void){return ft_printf("%.3f", -1.2365);}
+ int bonus_f_rnd_half_to_even_20(void){return ft_printf("%.3f", -1.2375);}
+ int bonus_f_rnd_half_to_even_21(void){return ft_printf("%.3f", -1.2385);}
+ int bonus_f_rnd_half_to_even_22(void){return ft_printf("%.3f", -1.2395);}
+ int bonus_f_rnd_half_to_even_24(void){return ft_printf("%.3f", 1.2305);}
+ int bonus_f_rnd_half_to_even_25(void){return ft_printf("%.3f", 1.2315);}
+ int bonus_f_rnd_half_to_even_26(void){return ft_printf("%.3f", 1.2325);}
+ int bonus_f_rnd_half_to_even_27(void){return ft_printf("%.3f", 1.2335);}
+ int bonus_f_rnd_half_to_even_28(void){return ft_printf("%.3f", 1.2345);}
+ int bonus_f_rnd_half_to_even_29(void){return ft_printf("%.3f", 1.2355);}
+ int bonus_f_rnd_half_to_even_30(void){return ft_printf("%.3f", 1.2365);}
+ int bonus_f_rnd_half_to_even_31(void){return ft_printf("%.3f", 1.2375);}
+ int bonus_f_rnd_half_to_even_32(void){return ft_printf("%.3f", 1.2385);}
+ int bonus_f_rnd_half_to_even_33(void){return ft_printf("%.3f", 1.2395);}
 // %e round half to even
  int bonus_e_rnd_half_to_even_01(void){return ft_printf("%.0e", -5.5);}
  int bonus_e_rnd_half_to_even_02(void){return ft_printf("%.0e", -4.5);}
@@ -12834,7 +12834,7 @@ const t_test_entry g_unit_tests[] = {
 	{1, 1459, "bonus_length_X_uhmax", bonus_length_X_uhmax, bonus_length_X_uhmax_bench, "{return test(\"%hX\", (unsigned short)65535);}"},
 	{1, 1460, "bonus_length_X_uhhmax", bonus_length_X_uhhmax, bonus_length_X_uhhmax_bench, "{return test(\"%hhX\", (unsigned char)255);}"},
 	{1, 1461, "bonus_length_X_l_pos_big_zp", bonus_length_X_l_pos_big_zp, bonus_length_X_l_pos_big_zp_bench, "{return test(\"%037lX\", 22337203685477ul);}"},
-	{1, 1462, "bonus_length_X_ll_pos_big_width", bonus_length_X_ll_pos_big_width, bonus_length_X_ll_pos_big_width_bench, "{return test(\"%37llX\", 522337203685470ull);}"},
+	{0, 1462, "bonus_length_X_ll_pos_big_width", bonus_length_X_ll_pos_big_width, bonus_length_X_ll_pos_big_width_bench, "{return test(\"%37llX\", 522337203685470ull);}"},
 	{1, 1463, "bonus_length_X_ll_hh_ll", bonus_length_X_ll_hh_ll, bonus_length_X_ll_hh_ll_bench, "{return test(\"%llu%hhu%llX\", ull_pos_1, uch_pos_1, ull_pos_1);}"},
 	{1, 1464, "bonus_length_X_h_l_hh", bonus_length_X_h_l_hh, bonus_length_X_h_l_hh_bench, "{return test(\"%hu%lu%hhX\", ush_pos_1, ul_pos_1, uch_pos_1);}"},
 	{1, 1465, "bonus_length_X_l_hh_h", bonus_length_X_l_hh_h, bonus_length_X_l_hh_h_bench, "{return test(\"%lu%hhu%hX\", ul_pos_1, uch_pos_1, ush_pos_1);}"},
@@ -12855,7 +12855,7 @@ const t_test_entry g_unit_tests[] = {
 	{1, 1480, "bonus_length_X_uhmax_af", bonus_length_X_uhmax_af, bonus_length_X_uhmax_af_bench, "{return test(\"%#hX\", (unsigned short)65535);}"},
 	{1, 1481, "bonus_length_X_uhhmax_af", bonus_length_X_uhhmax_af, bonus_length_X_uhhmax_af_bench, "{return test(\"%#hhX\", (unsigned char)255);}"},
 	{1, 1482, "bonus_length_X_l_pos_big_zp_af", bonus_length_X_l_pos_big_zp_af, bonus_length_X_l_pos_big_zp_af_bench, "{return test(\"%#037lX\", 22337203685477ul);}"},
-	{1, 1483, "bonus_length_X_ll_pos_big_width_af", bonus_length_X_ll_pos_big_width_af, bonus_length_X_ll_pos_big_width_af_bench, "{return test(\"%#37llX\", 522337203685470ull);}"},
+	{0, 1483, "bonus_length_X_ll_pos_big_width_af", bonus_length_X_ll_pos_big_width_af, bonus_length_X_ll_pos_big_width_af_bench, "{return test(\"%#37llX\", 522337203685470ull);}"},
 	{1, 1484, "bonus_length_X_ll_hh_ll_af", bonus_length_X_ll_hh_ll_af, bonus_length_X_ll_hh_ll_af_bench, "{return test(\"%llu%hhu%#llX\", ull_pos_1, uch_pos_1, ull_pos_1);}"},
 	{1, 1485, "bonus_length_X_h_l_hh_af", bonus_length_X_h_l_hh_af, bonus_length_X_h_l_hh_af_bench, "{return test(\"%#hx%lu%#hhX\", ush_pos_1, ul_pos_1, uch_pos_1);}"},
 	{1, 1486, "bonus_length_X_l_hh_h_af", bonus_length_X_l_hh_h_af, bonus_length_X_l_hh_h_af_bench, "{return test(\"%lu%hhu%#hX\", ul_pos_1, uch_pos_1, ush_pos_1);}"},
@@ -13296,18 +13296,18 @@ const t_test_entry g_unit_tests[] = {
 	{1, 1921, "bonus_f_wsp_prec1n", bonus_f_wsp_prec1n, bonus_f_wsp_prec1n_bench, "{return test(\"% 5.1f\", -7.3);}"},
 	{1, 1922, "bonus_f_wsp_prec3n", bonus_f_wsp_prec3n, bonus_f_wsp_prec3n_bench, "{return test(\"% 5.3f\", -7.3);}"},
 	{1, 1923, "bonus_f_wsp_prec6n", bonus_f_wsp_prec6n, bonus_f_wsp_prec6n_bench, "{return test(\"% 5.6f\", -7.3);}"},
-	{1, 1924, "bonus_f_wzpsp_prec0p_zero", bonus_f_wzpsp_prec0p_zero, bonus_f_wzpsp_prec0p_zero_bench, "{return test(\"% 05.0f\", 0.0);}"},
-	{1, 1925, "bonus_f_wzpsp_prec0p_nzero", bonus_f_wzpsp_prec0p_nzero, bonus_f_wzpsp_prec0p_nzero_bench, "{return test(\"% 05.0f\", -0.0);}"},
-	{1, 1926, "bonus_f_wzpsp_prec3p_zero", bonus_f_wzpsp_prec3p_zero, bonus_f_wzpsp_prec3p_zero_bench, "{return test(\"% 05.3f\", 0.0);}"},
-	{1, 1927, "bonus_f_wzpsp_prec3p_nzero", bonus_f_wzpsp_prec3p_nzero, bonus_f_wzpsp_prec3p_nzero_bench, "{return test(\"% 05.3f\", -0.0);}"},
-	{1, 1928, "bonus_f_wzpsp_prec0p", bonus_f_wzpsp_prec0p, bonus_f_wzpsp_prec0p_bench, "{return test(\"% 05.0f\", 7.3);}"},
-	{1, 1929, "bonus_f_wzpsp_prec1p", bonus_f_wzpsp_prec1p, bonus_f_wzpsp_prec1p_bench, "{return test(\"% 05.1f\", 7.3);}"},
-	{1, 1930, "bonus_f_wzpsp_prec3p", bonus_f_wzpsp_prec3p, bonus_f_wzpsp_prec3p_bench, "{return test(\"% 05.3f\", 7.3);}"},
-	{1, 1931, "bonus_f_wzpsp_prec6p", bonus_f_wzpsp_prec6p, bonus_f_wzpsp_prec6p_bench, "{return test(\"% 05.6f\", 7.3);}"},
-	{1, 1932, "bonus_f_wzpsp_prec0n", bonus_f_wzpsp_prec0n, bonus_f_wzpsp_prec0n_bench, "{return test(\"% 05.0f\", -7.3);}"},
-	{1, 1933, "bonus_f_wzpsp_prec1n", bonus_f_wzpsp_prec1n, bonus_f_wzpsp_prec1n_bench, "{return test(\"% 05.1f\", -7.3);}"},
-	{1, 1934, "bonus_f_wzpsp_prec3n", bonus_f_wzpsp_prec3n, bonus_f_wzpsp_prec3n_bench, "{return test(\"% 05.3f\", -7.3);}"},
-	{1, 1935, "bonus_f_wzpsp_prec6n", bonus_f_wzpsp_prec6n, bonus_f_wzpsp_prec6n_bench, "{return test(\"% 05.6f\", -7.3);}"},
+	{0, 1924, "bonus_f_wzpsp_prec0p_zero", bonus_f_wzpsp_prec0p_zero, bonus_f_wzpsp_prec0p_zero_bench, "{return test(\"% 05.0f\", 0.0);}"},
+	{0, 1925, "bonus_f_wzpsp_prec0p_nzero", bonus_f_wzpsp_prec0p_nzero, bonus_f_wzpsp_prec0p_nzero_bench, "{return test(\"% 05.0f\", -0.0);}"},
+	{0, 1926, "bonus_f_wzpsp_prec3p_zero", bonus_f_wzpsp_prec3p_zero, bonus_f_wzpsp_prec3p_zero_bench, "{return test(\"% 05.3f\", 0.0);}"},
+	{0, 1927, "bonus_f_wzpsp_prec3p_nzero", bonus_f_wzpsp_prec3p_nzero, bonus_f_wzpsp_prec3p_nzero_bench, "{return test(\"% 05.3f\", -0.0);}"},
+	{0, 1928, "bonus_f_wzpsp_prec0p", bonus_f_wzpsp_prec0p, bonus_f_wzpsp_prec0p_bench, "{return test(\"% 05.0f\", 7.3);}"},
+	{0, 1929, "bonus_f_wzpsp_prec1p", bonus_f_wzpsp_prec1p, bonus_f_wzpsp_prec1p_bench, "{return test(\"% 05.1f\", 7.3);}"},
+	{0, 1930, "bonus_f_wzpsp_prec3p", bonus_f_wzpsp_prec3p, bonus_f_wzpsp_prec3p_bench, "{return test(\"% 05.3f\", 7.3);}"},
+	{0, 1931, "bonus_f_wzpsp_prec6p", bonus_f_wzpsp_prec6p, bonus_f_wzpsp_prec6p_bench, "{return test(\"% 05.6f\", 7.3);}"},
+	{0, 1932, "bonus_f_wzpsp_prec0n", bonus_f_wzpsp_prec0n, bonus_f_wzpsp_prec0n_bench, "{return test(\"% 05.0f\", -7.3);}"},
+	{0, 1933, "bonus_f_wzpsp_prec1n", bonus_f_wzpsp_prec1n, bonus_f_wzpsp_prec1n_bench, "{return test(\"% 05.1f\", -7.3);}"},
+	{0, 1934, "bonus_f_wzpsp_prec3n", bonus_f_wzpsp_prec3n, bonus_f_wzpsp_prec3n_bench, "{return test(\"% 05.3f\", -7.3);}"},
+	{0, 1935, "bonus_f_wzpsp_prec6n", bonus_f_wzpsp_prec6n, bonus_f_wzpsp_prec6n_bench, "{return test(\"% 05.6f\", -7.3);}"},
 	{1, 1936, "bonus_f_wljsp_prec0p_zero", bonus_f_wljsp_prec0p_zero, bonus_f_wljsp_prec0p_zero_bench, "{return test(\"% -5.0f\", 0.0);}"},
 	{1, 1937, "bonus_f_wljsp_prec0p_nzero", bonus_f_wljsp_prec0p_nzero, bonus_f_wljsp_prec0p_nzero_bench, "{return test(\"% -5.0f\", -0.0);}"},
 	{1, 1938, "bonus_f_wljsp_prec3p_zero", bonus_f_wljsp_prec3p_zero, bonus_f_wljsp_prec3p_zero_bench, "{return test(\"% -5.3f\", 0.0);}"},
@@ -13408,46 +13408,46 @@ const t_test_entry g_unit_tests[] = {
 	{1, 2033, "bonus_notrequired_f_stress_limits_ndblmin_prec12", bonus_notrequired_f_stress_limits_ndblmin_prec12, bonus_notrequired_f_stress_limits_ndblmin_prec12_bench, "{return test(\"%.12f\", -DBL_MIN);}"},
 	{1, 2034, "bonus_notrequired_f_stress_limits_ndblmin_prec16", bonus_notrequired_f_stress_limits_ndblmin_prec16, bonus_notrequired_f_stress_limits_ndblmin_prec16_bench, "{return test(\"%.16f\", -DBL_MIN);}"},
 	{1, 2035, "bonus_notrequired_f_stress_limits_ndblmin_prec18", bonus_notrequired_f_stress_limits_ndblmin_prec18, bonus_notrequired_f_stress_limits_ndblmin_prec18_bench, "{return test(\"%.18f\", -DBL_MIN);}"},
-	{1, 2036, "bonus_notrequired_f_reserved_values_inf", bonus_notrequired_f_reserved_values_inf, bonus_notrequired_f_reserved_values_inf_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
-	{1, 2037, "bonus_notrequired_f_reserved_values_ninf", bonus_notrequired_f_reserved_values_ninf, bonus_notrequired_f_reserved_values_ninf_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
-	{1, 2038, "bonus_notrequired_f_reserved_values_nan", bonus_notrequired_f_reserved_values_nan, bonus_notrequired_f_reserved_values_nan_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
-	{1, 2039, "bonus_notrequired_f_reserved_values_pzero", bonus_notrequired_f_reserved_values_pzero, bonus_notrequired_f_reserved_values_pzero_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
-	{1, 2040, "bonus_notrequired_f_reserved_values_nzero", bonus_notrequired_f_reserved_values_nzero, bonus_notrequired_f_reserved_values_nzero_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
-	{1, 2041, "bonus_notrequired_f_reserved_values_inf_6w", bonus_notrequired_f_reserved_values_inf_6w, bonus_notrequired_f_reserved_values_inf_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
-	{1, 2042, "bonus_notrequired_f_reserved_values_ninf_6w", bonus_notrequired_f_reserved_values_ninf_6w, bonus_notrequired_f_reserved_values_ninf_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
-	{1, 2043, "bonus_notrequired_f_reserved_values_nan_6w", bonus_notrequired_f_reserved_values_nan_6w, bonus_notrequired_f_reserved_values_nan_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
-	{1, 2044, "bonus_notrequired_f_reserved_values_pzero_6w", bonus_notrequired_f_reserved_values_pzero_6w, bonus_notrequired_f_reserved_values_pzero_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
-	{1, 2045, "bonus_notrequired_f_reserved_values_nzero_6w", bonus_notrequired_f_reserved_values_nzero_6w, bonus_notrequired_f_reserved_values_nzero_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
-	{1, 2046, "bonus_notrequired_f_reserved_values_inf_6wlj", bonus_notrequired_f_reserved_values_inf_6wlj, bonus_notrequired_f_reserved_values_inf_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
-	{1, 2047, "bonus_notrequired_f_reserved_values_ninf_6wlj", bonus_notrequired_f_reserved_values_ninf_6wlj, bonus_notrequired_f_reserved_values_ninf_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
-	{1, 2048, "bonus_notrequired_f_reserved_values_nan_6wlj", bonus_notrequired_f_reserved_values_nan_6wlj, bonus_notrequired_f_reserved_values_nan_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
-	{1, 2049, "bonus_notrequired_f_reserved_values_pzero_6wlj", bonus_notrequired_f_reserved_values_pzero_6wlj, bonus_notrequired_f_reserved_values_pzero_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
-	{1, 2050, "bonus_notrequired_f_reserved_values_nzero_6wlj", bonus_notrequired_f_reserved_values_nzero_6wlj, bonus_notrequired_f_reserved_values_nzero_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
-	{1, 2051, "bonus_notrequired_f_reserved_values_inf_6was", bonus_notrequired_f_reserved_values_inf_6was, bonus_notrequired_f_reserved_values_inf_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
-	{1, 2052, "bonus_notrequired_f_reserved_values_ninf_6was", bonus_notrequired_f_reserved_values_ninf_6was, bonus_notrequired_f_reserved_values_ninf_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
-	{1, 2053, "bonus_notrequired_f_reserved_values_nan_6was", bonus_notrequired_f_reserved_values_nan_6was, bonus_notrequired_f_reserved_values_nan_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
-	{1, 2054, "bonus_notrequired_f_reserved_values_pzero_6was", bonus_notrequired_f_reserved_values_pzero_6was, bonus_notrequired_f_reserved_values_pzero_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
-	{1, 2055, "bonus_notrequired_f_reserved_values_nzero_6was", bonus_notrequired_f_reserved_values_nzero_6was, bonus_notrequired_f_reserved_values_nzero_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
-	{1, 2056, "bonus_notrequired_f_reserved_values_inf_10w_prec7", bonus_notrequired_f_reserved_values_inf_10w_prec7, bonus_notrequired_f_reserved_values_inf_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
-	{1, 2057, "bonus_notrequired_f_reserved_values_ninf_10w_prec7", bonus_notrequired_f_reserved_values_ninf_10w_prec7, bonus_notrequired_f_reserved_values_ninf_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
-	{1, 2058, "bonus_notrequired_f_reserved_values_nan_10w_prec7", bonus_notrequired_f_reserved_values_nan_10w_prec7, bonus_notrequired_f_reserved_values_nan_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
-	{1, 2059, "bonus_notrequired_f_reserved_values_pzero_10w_prec7", bonus_notrequired_f_reserved_values_pzero_10w_prec7, bonus_notrequired_f_reserved_values_pzero_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
-	{1, 2060, "bonus_notrequired_f_reserved_values_nzero_10w_prec7", bonus_notrequired_f_reserved_values_nzero_10w_prec7, bonus_notrequired_f_reserved_values_nzero_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
-	{1, 2061, "bonus_notrequired_f_reserved_values_inf_sp_prec7", bonus_notrequired_f_reserved_values_inf_sp_prec7, bonus_notrequired_f_reserved_values_inf_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
-	{1, 2062, "bonus_notrequired_f_reserved_values_ninf_sp_prec7", bonus_notrequired_f_reserved_values_ninf_sp_prec7, bonus_notrequired_f_reserved_values_ninf_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
-	{1, 2063, "bonus_notrequired_f_reserved_values_nan_sp_prec7", bonus_notrequired_f_reserved_values_nan_sp_prec7, bonus_notrequired_f_reserved_values_nan_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
-	{1, 2064, "bonus_notrequired_f_reserved_values_pzero_sp_prec7", bonus_notrequired_f_reserved_values_pzero_sp_prec7, bonus_notrequired_f_reserved_values_pzero_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
-	{1, 2065, "bonus_notrequired_f_reserved_values_nzero_sp_prec7", bonus_notrequired_f_reserved_values_nzero_sp_prec7, bonus_notrequired_f_reserved_values_nzero_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
-	{1, 2066, "bonus_notrequired_f_reserved_values_inf_sp", bonus_notrequired_f_reserved_values_inf_sp, bonus_notrequired_f_reserved_values_inf_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
-	{1, 2067, "bonus_notrequired_f_reserved_values_ninf_sp", bonus_notrequired_f_reserved_values_ninf_sp, bonus_notrequired_f_reserved_values_ninf_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
-	{1, 2068, "bonus_notrequired_f_reserved_values_nan_sp", bonus_notrequired_f_reserved_values_nan_sp, bonus_notrequired_f_reserved_values_nan_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
-	{1, 2069, "bonus_notrequired_f_reserved_values_pzero_sp", bonus_notrequired_f_reserved_values_pzero_sp, bonus_notrequired_f_reserved_values_pzero_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
-	{1, 2070, "bonus_notrequired_f_reserved_values_nzero_sp", bonus_notrequired_f_reserved_values_nzero_sp, bonus_notrequired_f_reserved_values_nzero_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
-	{1, 2071, "bonus_notrequired_f_reserved_values_inf_6wzp", bonus_notrequired_f_reserved_values_inf_6wzp, bonus_notrequired_f_reserved_values_inf_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
-	{1, 2072, "bonus_notrequired_f_reserved_values_ninf_6wzp", bonus_notrequired_f_reserved_values_ninf_6wzp, bonus_notrequired_f_reserved_values_ninf_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
-	{1, 2073, "bonus_notrequired_f_reserved_values_nan_6wzp", bonus_notrequired_f_reserved_values_nan_6wzp, bonus_notrequired_f_reserved_values_nan_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
-	{1, 2074, "bonus_notrequired_f_reserved_values_pzero_6wzp", bonus_notrequired_f_reserved_values_pzero_6wzp, bonus_notrequired_f_reserved_values_pzero_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
-	{1, 2075, "bonus_notrequired_f_reserved_values_nzero_6wzp", bonus_notrequired_f_reserved_values_nzero_6wzp, bonus_notrequired_f_reserved_values_nzero_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
+	{0, 2036, "bonus_notrequired_f_reserved_values_inf", bonus_notrequired_f_reserved_values_inf, bonus_notrequired_f_reserved_values_inf_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
+	{0, 2037, "bonus_notrequired_f_reserved_values_ninf", bonus_notrequired_f_reserved_values_ninf, bonus_notrequired_f_reserved_values_ninf_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
+	{0, 2038, "bonus_notrequired_f_reserved_values_nan", bonus_notrequired_f_reserved_values_nan, bonus_notrequired_f_reserved_values_nan_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
+	{0, 2039, "bonus_notrequired_f_reserved_values_pzero", bonus_notrequired_f_reserved_values_pzero, bonus_notrequired_f_reserved_values_pzero_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
+	{0, 2040, "bonus_notrequired_f_reserved_values_nzero", bonus_notrequired_f_reserved_values_nzero, bonus_notrequired_f_reserved_values_nzero_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
+	{0, 2041, "bonus_notrequired_f_reserved_values_inf_6w", bonus_notrequired_f_reserved_values_inf_6w, bonus_notrequired_f_reserved_values_inf_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
+	{0, 2042, "bonus_notrequired_f_reserved_values_ninf_6w", bonus_notrequired_f_reserved_values_ninf_6w, bonus_notrequired_f_reserved_values_ninf_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
+	{0, 2043, "bonus_notrequired_f_reserved_values_nan_6w", bonus_notrequired_f_reserved_values_nan_6w, bonus_notrequired_f_reserved_values_nan_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
+	{0, 2044, "bonus_notrequired_f_reserved_values_pzero_6w", bonus_notrequired_f_reserved_values_pzero_6w, bonus_notrequired_f_reserved_values_pzero_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
+	{0, 2045, "bonus_notrequired_f_reserved_values_nzero_6w", bonus_notrequired_f_reserved_values_nzero_6w, bonus_notrequired_f_reserved_values_nzero_6w_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
+	{0, 2046, "bonus_notrequired_f_reserved_values_inf_6wlj", bonus_notrequired_f_reserved_values_inf_6wlj, bonus_notrequired_f_reserved_values_inf_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
+	{0, 2047, "bonus_notrequired_f_reserved_values_ninf_6wlj", bonus_notrequired_f_reserved_values_ninf_6wlj, bonus_notrequired_f_reserved_values_ninf_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
+	{0, 2048, "bonus_notrequired_f_reserved_values_nan_6wlj", bonus_notrequired_f_reserved_values_nan_6wlj, bonus_notrequired_f_reserved_values_nan_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
+	{0, 2049, "bonus_notrequired_f_reserved_values_pzero_6wlj", bonus_notrequired_f_reserved_values_pzero_6wlj, bonus_notrequired_f_reserved_values_pzero_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
+	{0, 2050, "bonus_notrequired_f_reserved_values_nzero_6wlj", bonus_notrequired_f_reserved_values_nzero_6wlj, bonus_notrequired_f_reserved_values_nzero_6wlj_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
+	{0, 2051, "bonus_notrequired_f_reserved_values_inf_6was", bonus_notrequired_f_reserved_values_inf_6was, bonus_notrequired_f_reserved_values_inf_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
+	{0, 2052, "bonus_notrequired_f_reserved_values_ninf_6was", bonus_notrequired_f_reserved_values_ninf_6was, bonus_notrequired_f_reserved_values_ninf_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
+	{0, 2053, "bonus_notrequired_f_reserved_values_nan_6was", bonus_notrequired_f_reserved_values_nan_6was, bonus_notrequired_f_reserved_values_nan_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
+	{0, 2054, "bonus_notrequired_f_reserved_values_pzero_6was", bonus_notrequired_f_reserved_values_pzero_6was, bonus_notrequired_f_reserved_values_pzero_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
+	{0, 2055, "bonus_notrequired_f_reserved_values_nzero_6was", bonus_notrequired_f_reserved_values_nzero_6was, bonus_notrequired_f_reserved_values_nzero_6was_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
+	{0, 2056, "bonus_notrequired_f_reserved_values_inf_10w_prec7", bonus_notrequired_f_reserved_values_inf_10w_prec7, bonus_notrequired_f_reserved_values_inf_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
+	{0, 2057, "bonus_notrequired_f_reserved_values_ninf_10w_prec7", bonus_notrequired_f_reserved_values_ninf_10w_prec7, bonus_notrequired_f_reserved_values_ninf_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
+	{0, 2058, "bonus_notrequired_f_reserved_values_nan_10w_prec7", bonus_notrequired_f_reserved_values_nan_10w_prec7, bonus_notrequired_f_reserved_values_nan_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
+	{0, 2059, "bonus_notrequired_f_reserved_values_pzero_10w_prec7", bonus_notrequired_f_reserved_values_pzero_10w_prec7, bonus_notrequired_f_reserved_values_pzero_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
+	{0, 2060, "bonus_notrequired_f_reserved_values_nzero_10w_prec7", bonus_notrequired_f_reserved_values_nzero_10w_prec7, bonus_notrequired_f_reserved_values_nzero_10w_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
+	{0, 2061, "bonus_notrequired_f_reserved_values_inf_sp_prec7", bonus_notrequired_f_reserved_values_inf_sp_prec7, bonus_notrequired_f_reserved_values_inf_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
+	{0, 2062, "bonus_notrequired_f_reserved_values_ninf_sp_prec7", bonus_notrequired_f_reserved_values_ninf_sp_prec7, bonus_notrequired_f_reserved_values_ninf_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
+	{0, 2063, "bonus_notrequired_f_reserved_values_nan_sp_prec7", bonus_notrequired_f_reserved_values_nan_sp_prec7, bonus_notrequired_f_reserved_values_nan_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
+	{0, 2064, "bonus_notrequired_f_reserved_values_pzero_sp_prec7", bonus_notrequired_f_reserved_values_pzero_sp_prec7, bonus_notrequired_f_reserved_values_pzero_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
+	{0, 2065, "bonus_notrequired_f_reserved_values_nzero_sp_prec7", bonus_notrequired_f_reserved_values_nzero_sp_prec7, bonus_notrequired_f_reserved_values_nzero_sp_prec7_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
+	{0, 2066, "bonus_notrequired_f_reserved_values_inf_sp", bonus_notrequired_f_reserved_values_inf_sp, bonus_notrequired_f_reserved_values_inf_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
+	{0, 2067, "bonus_notrequired_f_reserved_values_ninf_sp", bonus_notrequired_f_reserved_values_ninf_sp, bonus_notrequired_f_reserved_values_ninf_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
+	{0, 2068, "bonus_notrequired_f_reserved_values_nan_sp", bonus_notrequired_f_reserved_values_nan_sp, bonus_notrequired_f_reserved_values_nan_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
+	{0, 2069, "bonus_notrequired_f_reserved_values_pzero_sp", bonus_notrequired_f_reserved_values_pzero_sp, bonus_notrequired_f_reserved_values_pzero_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
+	{0, 2070, "bonus_notrequired_f_reserved_values_nzero_sp", bonus_notrequired_f_reserved_values_nzero_sp, bonus_notrequired_f_reserved_values_nzero_sp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
+	{0, 2071, "bonus_notrequired_f_reserved_values_inf_6wzp", bonus_notrequired_f_reserved_values_inf_6wzp, bonus_notrequired_f_reserved_values_inf_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_INF;"},
+	{0, 2072, "bonus_notrequired_f_reserved_values_ninf_6wzp", bonus_notrequired_f_reserved_values_ninf_6wzp, bonus_notrequired_f_reserved_values_ninf_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NINF;"},
+	{0, 2073, "bonus_notrequired_f_reserved_values_nan_6wzp", bonus_notrequired_f_reserved_values_nan_6wzp, bonus_notrequired_f_reserved_values_nan_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NAN;"},
+	{0, 2074, "bonus_notrequired_f_reserved_values_pzero_6wzp", bonus_notrequired_f_reserved_values_pzero_6wzp, bonus_notrequired_f_reserved_values_pzero_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_PZERO;"},
+	{0, 2075, "bonus_notrequired_f_reserved_values_nzero_6wzp", bonus_notrequired_f_reserved_values_nzero_6wzp, bonus_notrequired_f_reserved_values_nzero_6wzp_bench, "{double special; *((unsigned long *)(&special)) = DBL_NZERO;"},
 	{0, 2076, "bonus_g_basic_1", bonus_g_basic_1, bonus_g_basic_1_bench, "{return test(\"this %g scientific notation\", 1.5);}"},
 	{0, 2077, "bonus_g_basic_fltonly", bonus_g_basic_fltonly, bonus_g_basic_fltonly_bench, "{return test(\"%g\", 7.5);}"},
 	{0, 2078, "bonus_g_basic_zero", bonus_g_basic_zero, bonus_g_basic_zero_bench, "{return test(\"%g\", 0.0);}"},
@@ -15067,46 +15067,46 @@ const t_test_entry g_unit_tests[] = {
 	{1, 3692, "notinsubject_f_L_stress_prec20_rndd", notinsubject_f_L_stress_prec20_rndd, notinsubject_f_L_stress_prec20_rndd_bench, "{return test(\"%.20f\",        1.025978548534310422034);}"},
 	{1, 3693, "notinsubject_f_L_stress_prec20_limits_tiny", notinsubject_f_L_stress_prec20_limits_tiny, notinsubject_f_L_stress_prec20_limits_tiny_bench, "{return test(\"%.20f\", 0.000000000000000000010);}"},
 	{1, 3694, "notinsubject_f_L_stress_prec20_limits_big", notinsubject_f_L_stress_prec20_limits_big, notinsubject_f_L_stress_prec20_limits_big_bench, "{return test(\"%.20f\",  0.999999999999999999990);}"},
-	{1, 3695, "notinsubject_f_L_reserved_values_inf", notinsubject_f_L_reserved_values_inf, notinsubject_f_L_reserved_values_inf_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
-	{1, 3696, "notinsubject_f_L_reserved_values_ninf", notinsubject_f_L_reserved_values_ninf, notinsubject_f_L_reserved_values_ninf_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3697, "notinsubject_f_L_reserved_values_nan", notinsubject_f_L_reserved_values_nan, notinsubject_f_L_reserved_values_nan_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3698, "notinsubject_f_L_reserved_values_pzero", notinsubject_f_L_reserved_values_pzero, notinsubject_f_L_reserved_values_pzero_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3699, "notinsubject_f_L_reserved_values_nzero", notinsubject_f_L_reserved_values_nzero, notinsubject_f_L_reserved_values_nzero_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3700, "notinsubject_f_L_reserved_values_inf_6w", notinsubject_f_L_reserved_values_inf_6w, notinsubject_f_L_reserved_values_inf_6w_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
-	{1, 3701, "notinsubject_f_L_reserved_values_ninf_6w", notinsubject_f_L_reserved_values_ninf_6w, notinsubject_f_L_reserved_values_ninf_6w_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3702, "notinsubject_f_L_reserved_values_nan_6w", notinsubject_f_L_reserved_values_nan_6w, notinsubject_f_L_reserved_values_nan_6w_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3703, "notinsubject_f_L_reserved_values_pzero_6w", notinsubject_f_L_reserved_values_pzero_6w, notinsubject_f_L_reserved_values_pzero_6w_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3704, "notinsubject_f_L_reserved_values_nzero_6w", notinsubject_f_L_reserved_values_nzero_6w, notinsubject_f_L_reserved_values_nzero_6w_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3705, "notinsubject_f_L_reserved_values_inf_6wlj", notinsubject_f_L_reserved_values_inf_6wlj, notinsubject_f_L_reserved_values_inf_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
-	{1, 3706, "notinsubject_f_L_reserved_values_ninf_6wlj", notinsubject_f_L_reserved_values_ninf_6wlj, notinsubject_f_L_reserved_values_ninf_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3707, "notinsubject_f_L_reserved_values_nan_6wlj", notinsubject_f_L_reserved_values_nan_6wlj, notinsubject_f_L_reserved_values_nan_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3708, "notinsubject_f_L_reserved_values_pzero_6wlj", notinsubject_f_L_reserved_values_pzero_6wlj, notinsubject_f_L_reserved_values_pzero_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3709, "notinsubject_f_L_reserved_values_nzero_6wlj", notinsubject_f_L_reserved_values_nzero_6wlj, notinsubject_f_L_reserved_values_nzero_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3710, "notinsubject_f_L_reserved_values_inf_6was", notinsubject_f_L_reserved_values_inf_6was, notinsubject_f_L_reserved_values_inf_6was_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
-	{1, 3711, "notinsubject_f_L_reserved_values_ninf_6was", notinsubject_f_L_reserved_values_ninf_6was, notinsubject_f_L_reserved_values_ninf_6was_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3712, "notinsubject_f_L_reserved_values_nan_6was", notinsubject_f_L_reserved_values_nan_6was, notinsubject_f_L_reserved_values_nan_6was_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3713, "notinsubject_f_L_reserved_values_pzero_6was", notinsubject_f_L_reserved_values_pzero_6was, notinsubject_f_L_reserved_values_pzero_6was_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3714, "notinsubject_f_L_reserved_values_nzero_6was", notinsubject_f_L_reserved_values_nzero_6was, notinsubject_f_L_reserved_values_nzero_6was_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3715, "notinsubject_f_L_reserved_values_inf_10w_prec7", notinsubject_f_L_reserved_values_inf_10w_prec7, notinsubject_f_L_reserved_values_inf_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;  FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
-	{1, 3716, "notinsubject_f_L_reserved_values_ninf_10w_prec7", notinsubject_f_L_reserved_values_ninf_10w_prec7, notinsubject_f_L_reserved_values_ninf_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3717, "notinsubject_f_L_reserved_values_nan_10w_prec7", notinsubject_f_L_reserved_values_nan_10w_prec7, notinsubject_f_L_reserved_values_nan_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3718, "notinsubject_f_L_reserved_values_pzero_10w_prec7", notinsubject_f_L_reserved_values_pzero_10w_prec7, notinsubject_f_L_reserved_values_pzero_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3719, "notinsubject_f_L_reserved_values_nzero_10w_prec7", notinsubject_f_L_reserved_values_nzero_10w_prec7, notinsubject_f_L_reserved_values_nzero_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3720, "notinsubject_f_L_reserved_values_inf_sp_prec7", notinsubject_f_L_reserved_values_inf_sp_prec7, notinsubject_f_L_reserved_values_inf_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;  FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
-	{1, 3721, "notinsubject_f_L_reserved_values_ninf_sp_prec7", notinsubject_f_L_reserved_values_ninf_sp_prec7, notinsubject_f_L_reserved_values_ninf_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3722, "notinsubject_f_L_reserved_values_nan_sp_prec7", notinsubject_f_L_reserved_values_nan_sp_prec7, notinsubject_f_L_reserved_values_nan_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3723, "notinsubject_f_L_reserved_values_pzero_sp_prec7", notinsubject_f_L_reserved_values_pzero_sp_prec7, notinsubject_f_L_reserved_values_pzero_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3724, "notinsubject_f_L_reserved_values_nzero_sp_prec7", notinsubject_f_L_reserved_values_nzero_sp_prec7, notinsubject_f_L_reserved_values_nzero_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3725, "notinsubject_f_L_reserved_values_inf_sp", notinsubject_f_L_reserved_values_inf_sp, notinsubject_f_L_reserved_values_inf_sp_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
-	{1, 3726, "notinsubject_f_L_reserved_values_ninf_sp", notinsubject_f_L_reserved_values_ninf_sp, notinsubject_f_L_reserved_values_ninf_sp_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3727, "notinsubject_f_L_reserved_values_nan_sp", notinsubject_f_L_reserved_values_nan_sp, notinsubject_f_L_reserved_values_nan_sp_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3728, "notinsubject_f_L_reserved_values_pzero_sp", notinsubject_f_L_reserved_values_pzero_sp, notinsubject_f_L_reserved_values_pzero_sp_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3729, "notinsubject_f_L_reserved_values_nzero_sp", notinsubject_f_L_reserved_values_nzero_sp, notinsubject_f_L_reserved_values_nzero_sp_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3730, "notinsubject_f_L_reserved_values_inf_6wzp", notinsubject_f_L_reserved_values_inf_6wzp, notinsubject_f_L_reserved_values_inf_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
-	{1, 3731, "notinsubject_f_L_reserved_values_ninf_6wzp", notinsubject_f_L_reserved_values_ninf_6wzp, notinsubject_f_L_reserved_values_ninf_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3732, "notinsubject_f_L_reserved_values_nan_6wzp", notinsubject_f_L_reserved_values_nan_6wzp, notinsubject_f_L_reserved_values_nan_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
-	{1, 3733, "notinsubject_f_L_reserved_values_pzero_6wzp", notinsubject_f_L_reserved_values_pzero_6wzp, notinsubject_f_L_reserved_values_pzero_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
-	{1, 3734, "notinsubject_f_L_reserved_values_nzero_6wzp", notinsubject_f_L_reserved_values_nzero_6wzp, notinsubject_f_L_reserved_values_nzero_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3695, "notinsubject_f_L_reserved_values_inf", notinsubject_f_L_reserved_values_inf, notinsubject_f_L_reserved_values_inf_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
+	{0, 3696, "notinsubject_f_L_reserved_values_ninf", notinsubject_f_L_reserved_values_ninf, notinsubject_f_L_reserved_values_ninf_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3697, "notinsubject_f_L_reserved_values_nan", notinsubject_f_L_reserved_values_nan, notinsubject_f_L_reserved_values_nan_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3698, "notinsubject_f_L_reserved_values_pzero", notinsubject_f_L_reserved_values_pzero, notinsubject_f_L_reserved_values_pzero_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3699, "notinsubject_f_L_reserved_values_nzero", notinsubject_f_L_reserved_values_nzero, notinsubject_f_L_reserved_values_nzero_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3700, "notinsubject_f_L_reserved_values_inf_6w", notinsubject_f_L_reserved_values_inf_6w, notinsubject_f_L_reserved_values_inf_6w_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
+	{0, 3701, "notinsubject_f_L_reserved_values_ninf_6w", notinsubject_f_L_reserved_values_ninf_6w, notinsubject_f_L_reserved_values_ninf_6w_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3702, "notinsubject_f_L_reserved_values_nan_6w", notinsubject_f_L_reserved_values_nan_6w, notinsubject_f_L_reserved_values_nan_6w_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3703, "notinsubject_f_L_reserved_values_pzero_6w", notinsubject_f_L_reserved_values_pzero_6w, notinsubject_f_L_reserved_values_pzero_6w_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3704, "notinsubject_f_L_reserved_values_nzero_6w", notinsubject_f_L_reserved_values_nzero_6w, notinsubject_f_L_reserved_values_nzero_6w_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3705, "notinsubject_f_L_reserved_values_inf_6wlj", notinsubject_f_L_reserved_values_inf_6wlj, notinsubject_f_L_reserved_values_inf_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
+	{0, 3706, "notinsubject_f_L_reserved_values_ninf_6wlj", notinsubject_f_L_reserved_values_ninf_6wlj, notinsubject_f_L_reserved_values_ninf_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3707, "notinsubject_f_L_reserved_values_nan_6wlj", notinsubject_f_L_reserved_values_nan_6wlj, notinsubject_f_L_reserved_values_nan_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3708, "notinsubject_f_L_reserved_values_pzero_6wlj", notinsubject_f_L_reserved_values_pzero_6wlj, notinsubject_f_L_reserved_values_pzero_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3709, "notinsubject_f_L_reserved_values_nzero_6wlj", notinsubject_f_L_reserved_values_nzero_6wlj, notinsubject_f_L_reserved_values_nzero_6wlj_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3710, "notinsubject_f_L_reserved_values_inf_6was", notinsubject_f_L_reserved_values_inf_6was, notinsubject_f_L_reserved_values_inf_6was_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
+	{0, 3711, "notinsubject_f_L_reserved_values_ninf_6was", notinsubject_f_L_reserved_values_ninf_6was, notinsubject_f_L_reserved_values_ninf_6was_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3712, "notinsubject_f_L_reserved_values_nan_6was", notinsubject_f_L_reserved_values_nan_6was, notinsubject_f_L_reserved_values_nan_6was_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3713, "notinsubject_f_L_reserved_values_pzero_6was", notinsubject_f_L_reserved_values_pzero_6was, notinsubject_f_L_reserved_values_pzero_6was_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3714, "notinsubject_f_L_reserved_values_nzero_6was", notinsubject_f_L_reserved_values_nzero_6was, notinsubject_f_L_reserved_values_nzero_6was_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3715, "notinsubject_f_L_reserved_values_inf_10w_prec7", notinsubject_f_L_reserved_values_inf_10w_prec7, notinsubject_f_L_reserved_values_inf_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;  FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
+	{0, 3716, "notinsubject_f_L_reserved_values_ninf_10w_prec7", notinsubject_f_L_reserved_values_ninf_10w_prec7, notinsubject_f_L_reserved_values_ninf_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3717, "notinsubject_f_L_reserved_values_nan_10w_prec7", notinsubject_f_L_reserved_values_nan_10w_prec7, notinsubject_f_L_reserved_values_nan_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3718, "notinsubject_f_L_reserved_values_pzero_10w_prec7", notinsubject_f_L_reserved_values_pzero_10w_prec7, notinsubject_f_L_reserved_values_pzero_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3719, "notinsubject_f_L_reserved_values_nzero_10w_prec7", notinsubject_f_L_reserved_values_nzero_10w_prec7, notinsubject_f_L_reserved_values_nzero_10w_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3720, "notinsubject_f_L_reserved_values_inf_sp_prec7", notinsubject_f_L_reserved_values_inf_sp_prec7, notinsubject_f_L_reserved_values_inf_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;  FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
+	{0, 3721, "notinsubject_f_L_reserved_values_ninf_sp_prec7", notinsubject_f_L_reserved_values_ninf_sp_prec7, notinsubject_f_L_reserved_values_ninf_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3722, "notinsubject_f_L_reserved_values_nan_sp_prec7", notinsubject_f_L_reserved_values_nan_sp_prec7, notinsubject_f_L_reserved_values_nan_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3723, "notinsubject_f_L_reserved_values_pzero_sp_prec7", notinsubject_f_L_reserved_values_pzero_sp_prec7, notinsubject_f_L_reserved_values_pzero_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3724, "notinsubject_f_L_reserved_values_nzero_sp_prec7", notinsubject_f_L_reserved_values_nzero_sp_prec7, notinsubject_f_L_reserved_values_nzero_sp_prec7_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3725, "notinsubject_f_L_reserved_values_inf_sp", notinsubject_f_L_reserved_values_inf_sp, notinsubject_f_L_reserved_values_inf_sp_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
+	{0, 3726, "notinsubject_f_L_reserved_values_ninf_sp", notinsubject_f_L_reserved_values_ninf_sp, notinsubject_f_L_reserved_values_ninf_sp_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3727, "notinsubject_f_L_reserved_values_nan_sp", notinsubject_f_L_reserved_values_nan_sp, notinsubject_f_L_reserved_values_nan_sp_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3728, "notinsubject_f_L_reserved_values_pzero_sp", notinsubject_f_L_reserved_values_pzero_sp, notinsubject_f_L_reserved_values_pzero_sp_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3729, "notinsubject_f_L_reserved_values_nzero_sp", notinsubject_f_L_reserved_values_nzero_sp, notinsubject_f_L_reserved_values_nzero_sp_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3730, "notinsubject_f_L_reserved_values_inf_6wzp", notinsubject_f_L_reserved_values_inf_6wzp, notinsubject_f_L_reserved_values_inf_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF; FTPF_LDBL_BYTE5(special) = 0x7FFF;"},
+	{0, 3731, "notinsubject_f_L_reserved_values_ninf_6wzp", notinsubject_f_L_reserved_values_ninf_6wzp, notinsubject_f_L_reserved_values_ninf_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = FTPF_LDBL_INF;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3732, "notinsubject_f_L_reserved_values_nan_6wzp", notinsubject_f_L_reserved_values_nan_6wzp, notinsubject_f_L_reserved_values_nan_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = 8ull;FTPF_LDBL_BYTE5(special) = 0xFFFF;"},
+	{0, 3733, "notinsubject_f_L_reserved_values_pzero_6wzp", notinsubject_f_L_reserved_values_pzero_6wzp, notinsubject_f_L_reserved_values_pzero_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
+	{0, 3734, "notinsubject_f_L_reserved_values_nzero_6wzp", notinsubject_f_L_reserved_values_nzero_6wzp, notinsubject_f_L_reserved_values_nzero_6wzp_bench, "{long double special; *((unsigned long *)(&special)) = 0ull;FTPF_LDBL_BYTE5(special) = 0;"},
 	{1, 3735, "notinsubject_f_L_overprec_might_be_undefbehav_100", notinsubject_f_L_overprec_might_be_undefbehav_100, notinsubject_f_L_overprec_might_be_undefbehav_100_bench, "{return test(\"%.100Lf\", 0.237l);}"},
 	{1, 3736, "notinsubject_f_L_overprec_might_be_undefbehav_32", notinsubject_f_L_overprec_might_be_undefbehav_32, notinsubject_f_L_overprec_might_be_undefbehav_32_bench, "{return test(\"%.32Lf\", 0.237l);}"},
 	{1, 3737, "notinsubject_f_L_overprec_might_be_undefbehav_4", notinsubject_f_L_overprec_might_be_undefbehav_4, notinsubject_f_L_overprec_might_be_undefbehav_4_bench, "{return test(\"%.4Lf\", 0.237l);}"},
@@ -15119,30 +15119,30 @@ const t_test_entry g_unit_tests[] = {
 	{1, 3744, "notinsubject_f_L_limits_dblmax_prec3", notinsubject_f_L_limits_dblmax_prec3, notinsubject_f_L_limits_dblmax_prec3_bench, "{return test(\"%.3Lf\", LDBL_MAX);}"},
 	{1, 3745, "notinsubject_f_L_limits_dblmax_precd", notinsubject_f_L_limits_dblmax_precd, notinsubject_f_L_limits_dblmax_precd_bench, "{return test(\"%Lf\", LDBL_MAX);}"},
 	{1, 3746, "notinsubject_f_L_limits_dblmax_prec8", notinsubject_f_L_limits_dblmax_prec8, notinsubject_f_L_limits_dblmax_prec8_bench, "{return test(\"%.8Lf\", LDBL_MAX);}"},
-	{1, 3747, "notinsubject_f_L_stress_limits_dblmax_prec12", notinsubject_f_L_stress_limits_dblmax_prec12, notinsubject_f_L_stress_limits_dblmax_prec12_bench, "{return test(\"%.12Lf\", LDBL_MAX);}"},
-	{1, 3748, "notinsubject_f_L_stress_limits_dblmax_prec16", notinsubject_f_L_stress_limits_dblmax_prec16, notinsubject_f_L_stress_limits_dblmax_prec16_bench, "{return test(\"%.16Lf\", LDBL_MAX);}"},
-	{1, 3749, "notinsubject_f_L_stress_limits_dblmax_prec18", notinsubject_f_L_stress_limits_dblmax_prec18, notinsubject_f_L_stress_limits_dblmax_prec18_bench, "{return test(\"%.18Lf\", LDBL_MAX);}"},
+	{0, 3747, "notinsubject_f_L_stress_limits_dblmax_prec12", notinsubject_f_L_stress_limits_dblmax_prec12, notinsubject_f_L_stress_limits_dblmax_prec12_bench, "{return test(\"%.12Lf\", LDBL_MAX);}"},
+	{0, 3748, "notinsubject_f_L_stress_limits_dblmax_prec16", notinsubject_f_L_stress_limits_dblmax_prec16, notinsubject_f_L_stress_limits_dblmax_prec16_bench, "{return test(\"%.16Lf\", LDBL_MAX);}"},
+	{0, 3749, "notinsubject_f_L_stress_limits_dblmax_prec18", notinsubject_f_L_stress_limits_dblmax_prec18, notinsubject_f_L_stress_limits_dblmax_prec18_bench, "{return test(\"%.18Lf\", LDBL_MAX);}"},
 	{1, 3750, "notinsubject_f_L_limits_ndblmax_prec0", notinsubject_f_L_limits_ndblmax_prec0, notinsubject_f_L_limits_ndblmax_prec0_bench, "{return test(\"%.0Lf\", -LDBL_MAX);}"},
 	{1, 3751, "notinsubject_f_L_limits_ndblmax_prec3", notinsubject_f_L_limits_ndblmax_prec3, notinsubject_f_L_limits_ndblmax_prec3_bench, "{return test(\"%.3Lf\", -LDBL_MAX);}"},
 	{1, 3752, "notinsubject_f_L_limits_ndblmax_precd", notinsubject_f_L_limits_ndblmax_precd, notinsubject_f_L_limits_ndblmax_precd_bench, "{return test(\"%Lf\", -LDBL_MAX);}"},
 	{1, 3753, "notinsubject_f_L_limits_ndblmax_prec8", notinsubject_f_L_limits_ndblmax_prec8, notinsubject_f_L_limits_ndblmax_prec8_bench, "{return test(\"%.8Lf\", -LDBL_MAX);}"},
-	{1, 3754, "notinsubject_f_L_stress_limits_ndblmax_prec12", notinsubject_f_L_stress_limits_ndblmax_prec12, notinsubject_f_L_stress_limits_ndblmax_prec12_bench, "{return test(\"%.12Lf\", -LDBL_MAX);}"},
-	{1, 3755, "notinsubject_f_L_stress_limits_ndblmax_prec16", notinsubject_f_L_stress_limits_ndblmax_prec16, notinsubject_f_L_stress_limits_ndblmax_prec16_bench, "{return test(\"%.16Lf\", -LDBL_MAX);}"},
-	{1, 3756, "notinsubject_f_L_stress_limits_ndblmax_prec18", notinsubject_f_L_stress_limits_ndblmax_prec18, notinsubject_f_L_stress_limits_ndblmax_prec18_bench, "{return test(\"%.18Lf\", -LDBL_MAX);}"},
+	{0, 3754, "notinsubject_f_L_stress_limits_ndblmax_prec12", notinsubject_f_L_stress_limits_ndblmax_prec12, notinsubject_f_L_stress_limits_ndblmax_prec12_bench, "{return test(\"%.12Lf\", -LDBL_MAX);}"},
+	{0, 3755, "notinsubject_f_L_stress_limits_ndblmax_prec16", notinsubject_f_L_stress_limits_ndblmax_prec16, notinsubject_f_L_stress_limits_ndblmax_prec16_bench, "{return test(\"%.16Lf\", -LDBL_MAX);}"},
+	{0, 3756, "notinsubject_f_L_stress_limits_ndblmax_prec18", notinsubject_f_L_stress_limits_ndblmax_prec18, notinsubject_f_L_stress_limits_ndblmax_prec18_bench, "{return test(\"%.18Lf\", -LDBL_MAX);}"},
 	{1, 3757, "notinsubject_f_L_limits_dblmin_prec0", notinsubject_f_L_limits_dblmin_prec0, notinsubject_f_L_limits_dblmin_prec0_bench, "{return test(\"%.0Lf\", LDBL_MIN);}"},
 	{1, 3758, "notinsubject_f_L_limits_dblmin_prec3", notinsubject_f_L_limits_dblmin_prec3, notinsubject_f_L_limits_dblmin_prec3_bench, "{return test(\"%.3Lf\", LDBL_MIN);}"},
 	{1, 3759, "notinsubject_f_L_limits_dblmin_precd", notinsubject_f_L_limits_dblmin_precd, notinsubject_f_L_limits_dblmin_precd_bench, "{return test(\"%Lf\", LDBL_MIN);}"},
 	{1, 3760, "notinsubject_f_L_limits_dblmin_prec8", notinsubject_f_L_limits_dblmin_prec8, notinsubject_f_L_limits_dblmin_prec8_bench, "{return test(\"%.8Lf\", LDBL_MIN);}"},
-	{1, 3761, "notinsubject_f_L_stress_limits_dblmin_prec12", notinsubject_f_L_stress_limits_dblmin_prec12, notinsubject_f_L_stress_limits_dblmin_prec12_bench, "{return test(\"%.12Lf\", LDBL_MIN);}"},
-	{1, 3762, "notinsubject_f_L_stress_limits_dblmin_prec16", notinsubject_f_L_stress_limits_dblmin_prec16, notinsubject_f_L_stress_limits_dblmin_prec16_bench, "{return test(\"%.16Lf\", LDBL_MIN);}"},
-	{1, 3763, "notinsubject_f_L_stress_limits_dblmin_prec18", notinsubject_f_L_stress_limits_dblmin_prec18, notinsubject_f_L_stress_limits_dblmin_prec18_bench, "{return test(\"%.18Lf\", LDBL_MIN);}"},
+	{0, 3761, "notinsubject_f_L_stress_limits_dblmin_prec12", notinsubject_f_L_stress_limits_dblmin_prec12, notinsubject_f_L_stress_limits_dblmin_prec12_bench, "{return test(\"%.12Lf\", LDBL_MIN);}"},
+	{0, 3762, "notinsubject_f_L_stress_limits_dblmin_prec16", notinsubject_f_L_stress_limits_dblmin_prec16, notinsubject_f_L_stress_limits_dblmin_prec16_bench, "{return test(\"%.16Lf\", LDBL_MIN);}"},
+	{0, 3763, "notinsubject_f_L_stress_limits_dblmin_prec18", notinsubject_f_L_stress_limits_dblmin_prec18, notinsubject_f_L_stress_limits_dblmin_prec18_bench, "{return test(\"%.18Lf\", LDBL_MIN);}"},
 	{1, 3764, "notinsubject_f_L_limits_ndblmin_prec0", notinsubject_f_L_limits_ndblmin_prec0, notinsubject_f_L_limits_ndblmin_prec0_bench, "{return test(\"%.0Lf\", -LDBL_MIN);}"},
 	{1, 3765, "notinsubject_f_L_limits_ndblmin_prec3", notinsubject_f_L_limits_ndblmin_prec3, notinsubject_f_L_limits_ndblmin_prec3_bench, "{return test(\"%.3Lf\", -LDBL_MIN);}"},
 	{1, 3766, "notinsubject_f_L_limits_ndblmin_precd", notinsubject_f_L_limits_ndblmin_precd, notinsubject_f_L_limits_ndblmin_precd_bench, "{return test(\"%Lf\", -LDBL_MIN);}"},
 	{1, 3767, "notinsubject_f_L_limits_ndblmin_prec8", notinsubject_f_L_limits_ndblmin_prec8, notinsubject_f_L_limits_ndblmin_prec8_bench, "{return test(\"%.8Lf\", -LDBL_MIN);}"},
-	{1, 3768, "notinsubject_f_L_stress_limits_ndblmin_prec12", notinsubject_f_L_stress_limits_ndblmin_prec12, notinsubject_f_L_stress_limits_ndblmin_prec12_bench, "{return test(\"%.12Lf\", -LDBL_MIN);}"},
-	{1, 3769, "notinsubject_f_L_stress_limits_ndblmin_prec16", notinsubject_f_L_stress_limits_ndblmin_prec16, notinsubject_f_L_stress_limits_ndblmin_prec16_bench, "{return test(\"%.16Lf\", -LDBL_MIN);}"},
-	{1, 3770, "notinsubject_f_L_stress_limits_ndblmin_prec18", notinsubject_f_L_stress_limits_ndblmin_prec18, notinsubject_f_L_stress_limits_ndblmin_prec18_bench, "{return test(\"%.18Lf\", -LDBL_MIN);}"},
+	{0, 3768, "notinsubject_f_L_stress_limits_ndblmin_prec12", notinsubject_f_L_stress_limits_ndblmin_prec12, notinsubject_f_L_stress_limits_ndblmin_prec12_bench, "{return test(\"%.12Lf\", -LDBL_MIN);}"},
+	{0, 3769, "notinsubject_f_L_stress_limits_ndblmin_prec16", notinsubject_f_L_stress_limits_ndblmin_prec16, notinsubject_f_L_stress_limits_ndblmin_prec16_bench, "{return test(\"%.16Lf\", -LDBL_MIN);}"},
+	{0, 3770, "notinsubject_f_L_stress_limits_ndblmin_prec18", notinsubject_f_L_stress_limits_ndblmin_prec18, notinsubject_f_L_stress_limits_ndblmin_prec18_bench, "{return test(\"%.18Lf\", -LDBL_MIN);}"},
 	{0, 3771, "notinsubject_moul_a_1", notinsubject_moul_a_1, notinsubject_moul_a_1_bench, "{return test(\"%a\", (double)42);}"},
 	{0, 3772, "notinsubject_moul_a_2", notinsubject_moul_a_2, notinsubject_moul_a_2_bench, "{return test(\"Kashim a %a histoires à raconter\", (double)1001);}"},
 	{0, 3773, "notinsubject_moul_a_3", notinsubject_moul_a_3, notinsubject_moul_a_3_bench, "{return test(\"Il fait au moins %a\n\", (double)-8000);}"},
@@ -15224,7 +15224,7 @@ const t_test_entry g_unit_tests[] = {
 	{1, 3849, "notinsubject_o_uhmax", notinsubject_o_uhmax, notinsubject_o_uhmax_bench, "{return test(\"%ho\", (unsigned short)65535);}"},
 	{1, 3850, "notinsubject_o_uhhmax", notinsubject_o_uhhmax, notinsubject_o_uhhmax_bench, "{return test(\"%hho\", (unsigned char)255);}"},
 	{1, 3851, "notinsubject_o_l_pos_big_zp", notinsubject_o_l_pos_big_zp, notinsubject_o_l_pos_big_zp_bench, "{return test(\"%037lo\", 22337203685477ul);}"},
-	{1, 3852, "notinsubject_o_ll_pos_big_width", notinsubject_o_ll_pos_big_width, notinsubject_o_ll_pos_big_width_bench, "{return test(\"%37llo\", 522337203685470ull);}"},
+	{0, 3852, "notinsubject_o_ll_pos_big_width", notinsubject_o_ll_pos_big_width, notinsubject_o_ll_pos_big_width_bench, "{return test(\"%37llo\", 522337203685470ull);}"},
 	{1, 3853, "notinsubject_o_ll_hh_ll", notinsubject_o_ll_hh_ll, notinsubject_o_ll_hh_ll_bench, "{return test(\"%llu%hhu%llo\", ull_pos_1, uch_pos_1, ull_pos_1);}"},
 	{1, 3854, "notinsubject_o_h_l_hh", notinsubject_o_h_l_hh, notinsubject_o_h_l_hh_bench, "{return test(\"%hu%lu%hho\", ush_pos_1, ul_pos_1, uch_pos_1);}"},
 	{1, 3855, "notinsubject_o_l_hh_h", notinsubject_o_l_hh_h, notinsubject_o_l_hh_h_bench, "{return test(\"%lu%hhu%ho\", ul_pos_1, uch_pos_1, ush_pos_1);}"},
@@ -15284,7 +15284,7 @@ const t_test_entry g_unit_tests[] = {
 	{1, 3909, "notinsubject_o_uhmax_af", notinsubject_o_uhmax_af, notinsubject_o_uhmax_af_bench, "{return test(\"%#ho\", (unsigned short)65535);}"},
 	{1, 3910, "notinsubject_o_uhhmax_af", notinsubject_o_uhhmax_af, notinsubject_o_uhhmax_af_bench, "{return test(\"%#hho\", (unsigned char)255);}"},
 	{1, 3911, "notinsubject_o_l_pos_big_zp_af", notinsubject_o_l_pos_big_zp_af, notinsubject_o_l_pos_big_zp_af_bench, "{return test(\"%#037lo\", 22337203685477ul);}"},
-	{1, 3912, "notinsubject_o_ll_pos_big_width_af", notinsubject_o_ll_pos_big_width_af, notinsubject_o_ll_pos_big_width_af_bench, "{return test(\"%#37llo\", 522337203685470ull);}"},
+	{0, 3912, "notinsubject_o_ll_pos_big_width_af", notinsubject_o_ll_pos_big_width_af, notinsubject_o_ll_pos_big_width_af_bench, "{return test(\"%#37llo\", 522337203685470ull);}"},
 	{1, 3913, "notinsubject_o_ll_hh_ll_af", notinsubject_o_ll_hh_ll_af, notinsubject_o_ll_hh_ll_af_bench, "{return test(\"%llu%hhu%#llo\", ull_pos_1, uch_pos_1, ull_pos_1);}"},
 	{1, 3914, "notinsubject_o_h_l_hh_af", notinsubject_o_h_l_hh_af, notinsubject_o_h_l_hh_af_bench, "{return test(\"%hu%lu%#hho\", ush_pos_1, ul_pos_1, uch_pos_1);}"},
 	{1, 3915, "notinsubject_o_l_hh_h_af", notinsubject_o_l_hh_h_af, notinsubject_o_l_hh_h_af_bench, "{return test(\"%#lo%hhu%#ho\", ul_pos_1, uch_pos_1, ush_pos_1);}"},
@@ -15360,7 +15360,7 @@ const t_test_entry g_unit_tests[] = {
 	{1, 3985, "notinsubject_moul_widechar_mix2_throwswarning", notinsubject_moul_widechar_mix2_throwswarning, notinsubject_moul_widechar_mix2_throwswarning_bench, "{return test(\"Lalalala, %d%% des gens qui parlent %C Ly adorent %s. Ou Presque. %d, %u, %X, %c\", 100, L'à', \"Ly\", 2, 10, 10000, '\n', \"ôHohoho\");}"},
 	{1, 3986, "notinsubject_moul_widechar_basic1", notinsubject_moul_widechar_basic1, notinsubject_moul_widechar_basic1_bench, "{wchar_t c = L'\x82'; return test(\"%C\n\", c);}"},
 	{1, 3987, "notinsubject_moul_widechar_basic2", notinsubject_moul_widechar_basic2, notinsubject_moul_widechar_basic2_bench, "{return test(\"%C\n\", L'ø');}"},
-	{1, 3988, "notinsubject_moul_widestr_basic2", notinsubject_moul_widestr_basic2, notinsubject_moul_widestr_basic2_bench, "{wchar_t wz[3] = L\"@@\"; return test(\"%ls\", wz);}"},
+	{0, 3988, "notinsubject_moul_widestr_basic2", notinsubject_moul_widestr_basic2, notinsubject_moul_widestr_basic2_bench, "{wchar_t wz[3] = L\"@@\"; return test(\"%ls\", wz);}"},
 	{0, 3989, "notinsubject_moul_D_1_notmandatory", notinsubject_moul_D_1_notmandatory, notinsubject_moul_D_1_notmandatory_bench, "{return test(\"%D\", 42);}"},
 	{0, 3990, "notinsubject_moul_D_2_notmandatory", notinsubject_moul_D_2_notmandatory, notinsubject_moul_D_2_notmandatory_bench, "{return test(\"Kashim a %D histoires à raconter\", 1001);}"},
 	{0, 3991, "notinsubject_moul_D_3_notmandatory", notinsubject_moul_D_3_notmandatory, notinsubject_moul_D_3_notmandatory_bench, "{return test(\"Il fait au moins %D\n\", -8000);}"},
@@ -15373,38 +15373,38 @@ const t_test_entry g_unit_tests[] = {
 	{0, 3998, "notinsubject_moul_D_10_notmandatory", notinsubject_moul_D_10_notmandatory, notinsubject_moul_D_10_notmandatory_bench, "{return test(\"%%D 0000042 == |%D|\n\", 0000042);}"},
 	{0, 3999, "notinsubject_moul_D_11_notmandatory", notinsubject_moul_D_11_notmandatory, notinsubject_moul_D_11_notmandatory_bench, "{return test(\"%%D \t == |%D|\n\", '\t');}"},
 	{0, 4000, "notinsubject_moul_D_12_notmandatory", notinsubject_moul_D_12_notmandatory, notinsubject_moul_D_12_notmandatory_bench, "{return test(\"%%D Lydie == |%D|\n\", 'L'+'y'+'d'+'i'+'e');}"},
-	{1, 4001, "bonus_f_rnd_half_to_even_01", bonus_f_rnd_half_to_even_01, bonus_f_rnd_half_to_even_01_bench, "{return test(\"%.0f\", -5.5);}"},
-	{1, 4002, "bonus_f_rnd_half_to_even_02", bonus_f_rnd_half_to_even_02, bonus_f_rnd_half_to_even_02_bench, "{return test(\"%.0f\", -4.5);}"},
-	{1, 4003, "bonus_f_rnd_half_to_even_03", bonus_f_rnd_half_to_even_03, bonus_f_rnd_half_to_even_03_bench, "{return test(\"%.0f\", -3.5);}"},
-	{1, 4004, "bonus_f_rnd_half_to_even_04", bonus_f_rnd_half_to_even_04, bonus_f_rnd_half_to_even_04_bench, "{return test(\"%.0f\", -2.5);}"},
-	{1, 4005, "bonus_f_rnd_half_to_even_05", bonus_f_rnd_half_to_even_05, bonus_f_rnd_half_to_even_05_bench, "{return test(\"%.0f\", -1.5);}"},
-	{1, 4006, "bonus_f_rnd_half_to_even_06", bonus_f_rnd_half_to_even_06, bonus_f_rnd_half_to_even_06_bench, "{return test(\"%.0f\", -0.5);}"},
-	{1, 4007, "bonus_f_rnd_half_to_even_07", bonus_f_rnd_half_to_even_07, bonus_f_rnd_half_to_even_07_bench, "{return test(\"%.0f\", 0.5);}"},
-	{1, 4008, "bonus_f_rnd_half_to_even_08", bonus_f_rnd_half_to_even_08, bonus_f_rnd_half_to_even_08_bench, "{return test(\"%.0f\", 1.5);}"},
-	{1, 4009, "bonus_f_rnd_half_to_even_09", bonus_f_rnd_half_to_even_09, bonus_f_rnd_half_to_even_09_bench, "{return test(\"%.0f\", 2.5);}"},
-	{1, 4010, "bonus_f_rnd_half_to_even_10", bonus_f_rnd_half_to_even_10, bonus_f_rnd_half_to_even_10_bench, "{return test(\"%.0f\", 3.5);}"},
-	{1, 4011, "bonus_f_rnd_half_to_even_11", bonus_f_rnd_half_to_even_11, bonus_f_rnd_half_to_even_11_bench, "{return test(\"%.0f\", 4.5);}"},
-	{1, 4012, "bonus_f_rnd_half_to_even_12", bonus_f_rnd_half_to_even_12, bonus_f_rnd_half_to_even_12_bench, "{return test(\"%.0f\", 5.5);}"},
-	{1, 4013, "bonus_f_rnd_half_to_even_13", bonus_f_rnd_half_to_even_13, bonus_f_rnd_half_to_even_13_bench, "{return test(\"%.3f\", -1.2305);}"},
-	{1, 4014, "bonus_f_rnd_half_to_even_14", bonus_f_rnd_half_to_even_14, bonus_f_rnd_half_to_even_14_bench, "{return test(\"%.3f\", -1.2315);}"},
-	{1, 4015, "bonus_f_rnd_half_to_even_15", bonus_f_rnd_half_to_even_15, bonus_f_rnd_half_to_even_15_bench, "{return test(\"%.3f\", -1.2325);}"},
-	{1, 4016, "bonus_f_rnd_half_to_even_16", bonus_f_rnd_half_to_even_16, bonus_f_rnd_half_to_even_16_bench, "{return test(\"%.3f\", -1.2335);}"},
-	{1, 4017, "bonus_f_rnd_half_to_even_17", bonus_f_rnd_half_to_even_17, bonus_f_rnd_half_to_even_17_bench, "{return test(\"%.3f\", -1.2345);}"},
-	{1, 4018, "bonus_f_rnd_half_to_even_18", bonus_f_rnd_half_to_even_18, bonus_f_rnd_half_to_even_18_bench, "{return test(\"%.3f\", -1.2355);}"},
-	{1, 4019, "bonus_f_rnd_half_to_even_19", bonus_f_rnd_half_to_even_19, bonus_f_rnd_half_to_even_19_bench, "{return test(\"%.3f\", -1.2365);}"},
-	{1, 4020, "bonus_f_rnd_half_to_even_20", bonus_f_rnd_half_to_even_20, bonus_f_rnd_half_to_even_20_bench, "{return test(\"%.3f\", -1.2375);}"},
-	{1, 4021, "bonus_f_rnd_half_to_even_21", bonus_f_rnd_half_to_even_21, bonus_f_rnd_half_to_even_21_bench, "{return test(\"%.3f\", -1.2385);}"},
-	{1, 4022, "bonus_f_rnd_half_to_even_22", bonus_f_rnd_half_to_even_22, bonus_f_rnd_half_to_even_22_bench, "{return test(\"%.3f\", -1.2395);}"},
-	{1, 4023, "bonus_f_rnd_half_to_even_24", bonus_f_rnd_half_to_even_24, bonus_f_rnd_half_to_even_24_bench, "{return test(\"%.3f\", 1.2305);}"},
-	{1, 4024, "bonus_f_rnd_half_to_even_25", bonus_f_rnd_half_to_even_25, bonus_f_rnd_half_to_even_25_bench, "{return test(\"%.3f\", 1.2315);}"},
-	{1, 4025, "bonus_f_rnd_half_to_even_26", bonus_f_rnd_half_to_even_26, bonus_f_rnd_half_to_even_26_bench, "{return test(\"%.3f\", 1.2325);}"},
-	{1, 4026, "bonus_f_rnd_half_to_even_27", bonus_f_rnd_half_to_even_27, bonus_f_rnd_half_to_even_27_bench, "{return test(\"%.3f\", 1.2335);}"},
-	{1, 4027, "bonus_f_rnd_half_to_even_28", bonus_f_rnd_half_to_even_28, bonus_f_rnd_half_to_even_28_bench, "{return test(\"%.3f\", 1.2345);}"},
-	{1, 4028, "bonus_f_rnd_half_to_even_29", bonus_f_rnd_half_to_even_29, bonus_f_rnd_half_to_even_29_bench, "{return test(\"%.3f\", 1.2355);}"},
-	{1, 4029, "bonus_f_rnd_half_to_even_30", bonus_f_rnd_half_to_even_30, bonus_f_rnd_half_to_even_30_bench, "{return test(\"%.3f\", 1.2365);}"},
-	{1, 4030, "bonus_f_rnd_half_to_even_31", bonus_f_rnd_half_to_even_31, bonus_f_rnd_half_to_even_31_bench, "{return test(\"%.3f\", 1.2375);}"},
-	{1, 4031, "bonus_f_rnd_half_to_even_32", bonus_f_rnd_half_to_even_32, bonus_f_rnd_half_to_even_32_bench, "{return test(\"%.3f\", 1.2385);}"},
-	{1, 4032, "bonus_f_rnd_half_to_even_33", bonus_f_rnd_half_to_even_33, bonus_f_rnd_half_to_even_33_bench, "{return test(\"%.3f\", 1.2395);}"},
+	{0, 4001, "bonus_f_rnd_half_to_even_01", bonus_f_rnd_half_to_even_01, bonus_f_rnd_half_to_even_01_bench, "{return test(\"%.0f\", -5.5);}"},
+	{0, 4002, "bonus_f_rnd_half_to_even_02", bonus_f_rnd_half_to_even_02, bonus_f_rnd_half_to_even_02_bench, "{return test(\"%.0f\", -4.5);}"},
+	{0, 4003, "bonus_f_rnd_half_to_even_03", bonus_f_rnd_half_to_even_03, bonus_f_rnd_half_to_even_03_bench, "{return test(\"%.0f\", -3.5);}"},
+	{0, 4004, "bonus_f_rnd_half_to_even_04", bonus_f_rnd_half_to_even_04, bonus_f_rnd_half_to_even_04_bench, "{return test(\"%.0f\", -2.5);}"},
+	{0, 4005, "bonus_f_rnd_half_to_even_05", bonus_f_rnd_half_to_even_05, bonus_f_rnd_half_to_even_05_bench, "{return test(\"%.0f\", -1.5);}"},
+	{0, 4006, "bonus_f_rnd_half_to_even_06", bonus_f_rnd_half_to_even_06, bonus_f_rnd_half_to_even_06_bench, "{return test(\"%.0f\", -0.5);}"},
+	{0, 4007, "bonus_f_rnd_half_to_even_07", bonus_f_rnd_half_to_even_07, bonus_f_rnd_half_to_even_07_bench, "{return test(\"%.0f\", 0.5);}"},
+	{0, 4008, "bonus_f_rnd_half_to_even_08", bonus_f_rnd_half_to_even_08, bonus_f_rnd_half_to_even_08_bench, "{return test(\"%.0f\", 1.5);}"},
+	{0, 4009, "bonus_f_rnd_half_to_even_09", bonus_f_rnd_half_to_even_09, bonus_f_rnd_half_to_even_09_bench, "{return test(\"%.0f\", 2.5);}"},
+	{0, 4010, "bonus_f_rnd_half_to_even_10", bonus_f_rnd_half_to_even_10, bonus_f_rnd_half_to_even_10_bench, "{return test(\"%.0f\", 3.5);}"},
+	{0, 4011, "bonus_f_rnd_half_to_even_11", bonus_f_rnd_half_to_even_11, bonus_f_rnd_half_to_even_11_bench, "{return test(\"%.0f\", 4.5);}"},
+	{0, 4012, "bonus_f_rnd_half_to_even_12", bonus_f_rnd_half_to_even_12, bonus_f_rnd_half_to_even_12_bench, "{return test(\"%.0f\", 5.5);}"},
+	{0, 4013, "bonus_f_rnd_half_to_even_13", bonus_f_rnd_half_to_even_13, bonus_f_rnd_half_to_even_13_bench, "{return test(\"%.3f\", -1.2305);}"},
+	{0, 4014, "bonus_f_rnd_half_to_even_14", bonus_f_rnd_half_to_even_14, bonus_f_rnd_half_to_even_14_bench, "{return test(\"%.3f\", -1.2315);}"},
+	{0, 4015, "bonus_f_rnd_half_to_even_15", bonus_f_rnd_half_to_even_15, bonus_f_rnd_half_to_even_15_bench, "{return test(\"%.3f\", -1.2325);}"},
+	{0, 4016, "bonus_f_rnd_half_to_even_16", bonus_f_rnd_half_to_even_16, bonus_f_rnd_half_to_even_16_bench, "{return test(\"%.3f\", -1.2335);}"},
+	{0, 4017, "bonus_f_rnd_half_to_even_17", bonus_f_rnd_half_to_even_17, bonus_f_rnd_half_to_even_17_bench, "{return test(\"%.3f\", -1.2345);}"},
+	{0, 4018, "bonus_f_rnd_half_to_even_18", bonus_f_rnd_half_to_even_18, bonus_f_rnd_half_to_even_18_bench, "{return test(\"%.3f\", -1.2355);}"},
+	{0, 4019, "bonus_f_rnd_half_to_even_19", bonus_f_rnd_half_to_even_19, bonus_f_rnd_half_to_even_19_bench, "{return test(\"%.3f\", -1.2365);}"},
+	{0, 4020, "bonus_f_rnd_half_to_even_20", bonus_f_rnd_half_to_even_20, bonus_f_rnd_half_to_even_20_bench, "{return test(\"%.3f\", -1.2375);}"},
+	{0, 4021, "bonus_f_rnd_half_to_even_21", bonus_f_rnd_half_to_even_21, bonus_f_rnd_half_to_even_21_bench, "{return test(\"%.3f\", -1.2385);}"},
+	{0, 4022, "bonus_f_rnd_half_to_even_22", bonus_f_rnd_half_to_even_22, bonus_f_rnd_half_to_even_22_bench, "{return test(\"%.3f\", -1.2395);}"},
+	{0, 4023, "bonus_f_rnd_half_to_even_24", bonus_f_rnd_half_to_even_24, bonus_f_rnd_half_to_even_24_bench, "{return test(\"%.3f\", 1.2305);}"},
+	{0, 4024, "bonus_f_rnd_half_to_even_25", bonus_f_rnd_half_to_even_25, bonus_f_rnd_half_to_even_25_bench, "{return test(\"%.3f\", 1.2315);}"},
+	{0, 4025, "bonus_f_rnd_half_to_even_26", bonus_f_rnd_half_to_even_26, bonus_f_rnd_half_to_even_26_bench, "{return test(\"%.3f\", 1.2325);}"},
+	{0, 4026, "bonus_f_rnd_half_to_even_27", bonus_f_rnd_half_to_even_27, bonus_f_rnd_half_to_even_27_bench, "{return test(\"%.3f\", 1.2335);}"},
+	{0, 4027, "bonus_f_rnd_half_to_even_28", bonus_f_rnd_half_to_even_28, bonus_f_rnd_half_to_even_28_bench, "{return test(\"%.3f\", 1.2345);}"},
+	{0, 4028, "bonus_f_rnd_half_to_even_29", bonus_f_rnd_half_to_even_29, bonus_f_rnd_half_to_even_29_bench, "{return test(\"%.3f\", 1.2355);}"},
+	{0, 4029, "bonus_f_rnd_half_to_even_30", bonus_f_rnd_half_to_even_30, bonus_f_rnd_half_to_even_30_bench, "{return test(\"%.3f\", 1.2365);}"},
+	{0, 4030, "bonus_f_rnd_half_to_even_31", bonus_f_rnd_half_to_even_31, bonus_f_rnd_half_to_even_31_bench, "{return test(\"%.3f\", 1.2375);}"},
+	{0, 4031, "bonus_f_rnd_half_to_even_32", bonus_f_rnd_half_to_even_32, bonus_f_rnd_half_to_even_32_bench, "{return test(\"%.3f\", 1.2385);}"},
+	{0, 4032, "bonus_f_rnd_half_to_even_33", bonus_f_rnd_half_to_even_33, bonus_f_rnd_half_to_even_33_bench, "{return test(\"%.3f\", 1.2395);}"},
 	{0, 4033, "bonus_e_rnd_half_to_even_01", bonus_e_rnd_half_to_even_01, bonus_e_rnd_half_to_even_01_bench, "{return test(\"%.0e\", -5.5);}"},
 	{0, 4034, "bonus_e_rnd_half_to_even_02", bonus_e_rnd_half_to_even_02, bonus_e_rnd_half_to_even_02_bench, "{return test(\"%.0e\", -4.5);}"},
 	{0, 4035, "bonus_e_rnd_half_to_even_03", bonus_e_rnd_half_to_even_03, bonus_e_rnd_half_to_even_03_bench, "{return test(\"%.0e\", -3.5);}"},

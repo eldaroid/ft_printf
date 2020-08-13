@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:24:33 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/11 21:55:52 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 14:28:25 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ t_flag      ft_parse_length(const char *format, size_t *i, va_list list, t_flag 
 		flag.length.ll = 1;
 		(*i)++;
 	}
-	else if (format[*i] == 'l' || format[*i] == 'L')
+	else if (format[*i] == 'l')
 		flag.length.l = 1;
+	else if (format[*i] == 'L')
+		flag.length.L = 1;
 	else if (format[*i] == 'z')
 		flag.length.l = 'z';
 	else if (format[*i] == 'j')
@@ -69,7 +71,7 @@ int     ft_parser(const char *format, size_t *i, va_list list)
 {
 	t_flag      flag;
 
-	flag = (t_flag){ 0, 0, 0, 0, 0, 0, 0, 0, { 0, 0, 0, 0, 1}, { 0, 0, 0, 0, 0 } };
+	flag = (t_flag){ 0, 0, 0, 0, 0, 0, 0, 0, { 0, 0, 0, 0, 0, 1}, { 0, 0, 0, 0, 0 } };
 	flag = ft_parse_flag(format, i, list, flag);
 	return (print_type(format, i, list, flag));
 }

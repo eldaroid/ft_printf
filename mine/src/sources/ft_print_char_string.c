@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:43:44 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/12 20:27:58 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 17:32:00 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,19 @@ int			ft_print_char(va_list list, t_flag flag)
 	return (len + zero);
 }
 
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	if (str)
+	{
+		while (str[i])
+			i++;
+	}
+	return (i);
+}
+
 int			ft_print_string(va_list list, t_flag flag)
 {
 	char	*str;
@@ -53,7 +66,8 @@ int			ft_print_string(va_list list, t_flag flag)
 		str = ft_strdup("(null)");
 		clean = 1;
 	}
-	len = ft_strlen(str);
+	if (str[0] != (char)NULL)
+		len = ft_strlen(str);
 	if (flag.dot && flag.size.dot < len && flag.size.dot >= 0)
 	{
 		len = flag.size.dot;
