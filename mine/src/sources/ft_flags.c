@@ -6,20 +6,20 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 20:49:50 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/12 19:43:28 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 18:34:24 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_flag  ft_parse_flag_zero(const char *format, size_t *i, va_list list, t_flag  flag)
+t_flag	ft_parse_zero(const char *format, size_t *i, va_list list, t_flag flag)
 {
 	size_t	k;
 
 	k = 0;
-    flag.zero = 1;
-    flag.size.zero = ft_count_size(format, i, list);
-	if 	(flag.size.zero == 0 && format[(*i)] != '-')
+	flag.zero = 1;
+	flag.size.zero = ft_count_size(format, i, list);
+	if (flag.size.zero == 0 && format[(*i)] != '-')
 	{
 		k = (*i) + 1;
 		flag.size.zero = ft_count_size(format, &k, list);
@@ -30,10 +30,10 @@ t_flag  ft_parse_flag_zero(const char *format, size_t *i, va_list list, t_flag  
 		flag.star = 1;
 		flag.size.star = flag.size.zero;
 	}
-    return (flag);
+	return (flag);
 }
 
-t_flag  ft_parse_flag_minus(const char *format, size_t *i, va_list list, t_flag  flag)
+t_flag	ft_parse_minus(const char *format, size_t *i, va_list list, t_flag flag)
 {
 	flag.star = 1;
 	if (format[*i] == '-')
@@ -46,24 +46,24 @@ t_flag  ft_parse_flag_minus(const char *format, size_t *i, va_list list, t_flag 
 	return (flag);
 }
 
-t_flag  ft_parse_flag_plus(const char *format, size_t *i, va_list list, t_flag  flag)
+t_flag	ft_parse_plus(const char *format, size_t *i, va_list list, t_flag flag)
 {
 	flag.plus = 1;
 	if (format[(*i) + 1] != '0')
 		flag.size.plus = ft_count_size(format, i, list);
 	else if (format[(*i) + 1] == '0')
-		flag = ft_parse_flag_zero(format, i, list, flag);
+		flag = ft_parse_zero(format, i, list, flag);
 	return (flag);
 }
 
-t_flag  ft_parse_flag_space(const char *format, size_t *i, va_list list, t_flag  flag)
+t_flag	ft_parse_space(const char *format, size_t *i, va_list list, t_flag flag)
 {
 	flag.space = 1;
 	flag.size.space = ft_count_size(format, i, list);
 	return (flag);
 }
 
-t_flag  ft_parse_flag_dot(const char *format, size_t *i, va_list list, t_flag  flag)
+t_flag	ft_parse_dot(const char *format, size_t *i, va_list list, t_flag flag)
 {
 	flag.dot = 1;
 	flag.size.dot = ft_count_size(format, i, list);

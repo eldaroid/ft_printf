@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:24:33 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/13 14:28:25 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 18:32:35 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,16 @@ t_flag  ft_parse_flag(const char *format, size_t *i, va_list list, t_flag flag)
 	while (!(ft_strchr("cspdiuxoXfegUZ%", format[*i])) && format[*i])
 	{
 		if (format[*i] == '0')
-			flag = ft_parse_flag_zero(format, i, list, flag);
+			flag = ft_parse_zero(format, i, list, flag);
 		else if ((format[*i] >= '1' && format[*i] <= '9')
 			|| format[*i] == '-' || format[*i] == '*')
-			flag = ft_parse_flag_minus(format, i, list, flag);
+			flag = ft_parse_minus(format, i, list, flag);
 		else if (format[*i] == '+')
-			flag = ft_parse_flag_plus(format, i, list, flag);
+			flag = ft_parse_plus(format, i, list, flag);
 		else if (format[*i] == ' ')
-			flag = ft_parse_flag_space(format, i, list, flag);
+			flag = ft_parse_space(format, i, list, flag);
 		else if (format[*i] == '.')
-			flag = ft_parse_flag_dot(format, i, list, flag);
+			flag = ft_parse_dot(format, i, list, flag);
 		else if (format[*i] == '#')
 		{
 			flag.hash = 1;

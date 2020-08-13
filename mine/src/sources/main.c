@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:22:43 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/13 17:58:13 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 18:05:03 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ int     main(void)
 // // printf("4 = %d\n", j);
 // ft_printf("{%Lf}\n", 1.42l);
 // printf("{%f}{%lf}{%Lf}", 1.42, 1.42, 1.42l);
-ft_printf("%.12Lf\n\n", LDBL_MAX);
-printf("%.12Lf", LDBL_MAX);
+// ft_printf("%.12Lf\n\n", LDBL_MAX);
+// printf("%.12Lf", LDBL_MAX);
 // ft_printf("{%Lf}\n", 1444565444646.6465424242242l);
 //  printf("{%Lf}\n", 1444565444646.6465424242242l);
 // ft_printf("%-5+d", 42);

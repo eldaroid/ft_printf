@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 15:38:33 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/13 17:54:48 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 18:38:05 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,15 @@ typedef struct	s_flag
 int     	ft_printf(const char *format, ...);
 int			print_type(const char *str, size_t *i, va_list list, t_flag flag);
 int     	ft_count_size(const char *format, size_t *i, va_list list);
-t_flag  	ft_parse_flag_zero(const char *format, size_t *i, va_list list, t_flag  flag);
+t_flag	ft_parse_zero(const char *format, size_t *i, va_list list, t_flag flag);
 t_flag  	ft_parse_flag(const char *format, size_t *i, va_list list, t_flag flag);
 int     	ft_parser(const char *format, size_t *i, va_list list);
 int			ft_atoi_minus_star(size_t *i, va_list list, int sign);
 int    		ft_sprintf(const char *format, va_list list);
-t_flag  	ft_parse_flag_plus(const char *format, size_t *i, va_list list, t_flag  flag);
-t_flag  	ft_parse_flag_dot(const char *format, size_t *i, va_list list, t_flag  flag);
-t_flag  	ft_parse_flag_space(const char *format, size_t *i, va_list list, t_flag  flag);
-t_flag  	ft_parse_flag_minus(const char *format, size_t *i, va_list list, t_flag  flag);
+t_flag	ft_parse_plus(const char *format, size_t *i, va_list list, t_flag flag);
+t_flag	ft_parse_dot(const char *format, size_t *i, va_list list, t_flag flag);
+t_flag	ft_parse_space(const char *format, size_t *i, va_list list, t_flag flag);
+t_flag	ft_parse_minus(const char *format, size_t *i, va_list list, t_flag flag);
 char		*ft_strchr(const char *str, int c);
 int			ft_power(long long n, int base);
 char		ft_symbol(int n);
@@ -108,6 +108,8 @@ int			ft_print_with_int(char *str, int size_star, int str_len, int clean, t_flag
 char		*ft_utoa_base(unsigned long long int n, int base, t_flag flag);
 int			ft_upower(unsigned long long int n, int base);
 int     	ft_sprintf(const char *format, va_list list);
+int		check_all(const char *format, size_t *i, va_list list, int count);
 int     	main(void);
+void	hashing(char type, char **str, int power);
 
 #endif
