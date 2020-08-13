@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 16:43:45 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/13 19:42:41 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/13 19:47:02 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int			is_double_negative(double nb)
 {
-	int	i;
-	unsigned char *c_nb;
-	unsigned char minus_part;
+	int				i;
+	unsigned char	*c_nb;
+	unsigned char	minus_part;
 
 	c_nb = (unsigned char *)&nb;
 	minus_part = c_nb[sizeof(double) - 1];
@@ -31,7 +31,7 @@ char		*ft_before_dot(double number, int check_dot, t_flag flag, int zero)
 	char	*str;
 
 	power = ((unsigned int)number == 0 && is_double_negative(number))
-											? 2 : ft_power(number, 10);
+			? 2 : ft_power(number, 10);
 	if (flag.zero > 0 && zero)
 		power = (flag.size.zero >= power) ? flag.size.zero : power;
 	if (!(str = (char *)malloc(sizeof(char) * (power + 2 - zero))))
