@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:42:54 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 15:53:17 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:33:52 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 static int	ft_print_indent(char *str, int size_star, int str_len, int clean)
 {

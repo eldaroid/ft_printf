@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:41:31 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 15:48:17 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:33:54 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 int		ft_check_power(t_flag flag, unsigned long long int n, int base)
 {

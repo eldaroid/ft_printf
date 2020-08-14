@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 20:27:47 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 13:34:07 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:32:52 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 int		is_double_negative(double nb)
 {

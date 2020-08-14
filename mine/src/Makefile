@@ -1,76 +1,58 @@
-NAME = libftprintf.a
+NAME		= libftprintf.a
 
-SRCS = sources/*.c \
+INC_DIR		= header/
+SRC_DIR		= ./sources
 
-OBJS = $(SRCS:.c=.o)
+HEADERS		= ft_printf.h
+SRC = \
+		libft/ft_strchr.c \
+		libft/ft_strlen.c \
+		sources/ft_atoi_i.c \
+		sources/ft_flags.c \
+		sources/ft_floating.c \
+		sources/ft_hash.c \
+		sources/ft_itoa_base.c \
+		sources/ft_length.c \
+		sources/ft_long_float.c \
+		sources/ft_print.c \
+		sources/ft_print_address.c \
+		sources/ft_print_char_string.c \
+		sources/ft_print_float.c \
+		sources/ft_print_integer.c \
+		sources/ft_print_percent.c \
+		sources/ft_print_unsignedint.c \
+		sources/ft_print_with_indent.c \
+		sources/ft_printf.c
 
-LIBFT = libft/libft.a
+OBJS = $(SRC:.c=.o)
 
-LIBFT_NAME = libft.a
+LIBFT = ./libft
 
-LIBFT_SRCS = $(wildcard libft/*.c)
-LIBFT_OBJS = $(LIBFT_SRCS:.c=.o)
-LIBFT_HEADER = libft/libft.h
+WFL = -Wall -Wextra -Werror
 
-HEADER = header/ft_printf.h
+IFL = -I $(INC_DIR)
 
-CC = gcc
-
-CFLAGS = -Wall -Wextra -Werror -c -g
-
-.PHONY = all clean fclean re create_libt6
+SRCS = $(addprefix $(SRC_DIR))
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(LIBFT_OBJS) $(LIBFT_SRCS) $(LIBFT_HEADER)
-	make -C libft all
-	cp $(LIBFT) .
-	mv $(LIBFT_NAME) $(NAME)
+$(NAME): $(OBJS)
+	$(MAKE) -C $(LIBFT)/
+	cp $(LIBFT)/libft.a ./$(NAME)
 	ar rc $(NAME) $(OBJS)
-	rm sources/*.o
+	ranlib $(NAME)
 
-$(OBJS): $(SRCS) $(HEADER)
-	$(CC) $(CFLAGS) $(SRCS) -I header
-	mv *.o sources
-	
+%.o: $(SRC_DIR)/%.c
+	gcc $(WFL) $(IFL) -c $< -o $@
+
 clean:
-	rm -f $(OBJS)
-	rm -rf a.*
-	make -C libft clean
+	$(MAKE) -C $(LIBFT)/ clean
+	rm -rf $(OBJS)
+
 fclean: clean
-	rm -f $(NAME)
-	make -C libft fclean
+	$(MAKE) -C $(LIBFT)/ fclean
+	rm -rf $(NAME)
+
 re: fclean all
 
-# # #
-# NAME = printf
-
-# SRCS = sources/*.c \
-
-# LIBFT = libft/libft.a
-
-# LIBFT_NAME = libft.a
-
-# HEADER = ft_printf.h
-
-# CC = gcc
-
-# CFLAGS = -g 
-
-# .PHONY = all clean fclean re 
-
-# all: $(NAME) 
-
-# $(NAME): $(OBJS) $(LIBFT_OBJS) $(LIBFT_SRCS) $(LIBFT_HEADER)
-# 	make -C libft all
-# 	mv $(LIBFT) .
-# 	gcc -g $(SRCS) -L. -lft -I header
-# 	./a.out | cat -e
-	
-# clean:
-# 	rm -rf a.* *.a
-# 	rm -rf sources/*.o
-# 	rm -rf *.o
-# fclean: clean
-# 		make -C libft clean
-# re: fclean all
+.PHONY: all clean fclean re

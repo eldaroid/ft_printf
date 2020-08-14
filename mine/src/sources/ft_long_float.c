@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 13:35:37 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 14:27:04 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:33:36 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 char		*ft_bef(long double number, int check_dot, t_flag flag, int zero)
 {

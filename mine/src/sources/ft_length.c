@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 13:12:41 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 13:34:28 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:33:33 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 int							check_undefine(t_flag flag)
 {

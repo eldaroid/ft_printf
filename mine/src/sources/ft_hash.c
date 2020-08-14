@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 18:08:41 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 15:53:00 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 17:02:36 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 static void	hashing(char type, char **str)
 {

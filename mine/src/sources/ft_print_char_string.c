@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 12:04:18 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 15:00:51 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:33:44 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 int			ft_print_char(va_list list, t_flag flag)
 {

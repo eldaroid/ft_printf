@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 17:42:07 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 15:02:15 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:47:54 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 int				new_flag_star(t_flag flag, long double number,
 				long long str_len)
@@ -73,9 +73,9 @@ int				ft_print_float(va_list list, t_flag flag)
 	char			*str;
 	long long int	str_len;
 
-	number = (long double)(flag.length.L == 1) ? va_arg(list, long double)
+	number = (long double)(flag.length.lll == 1) ? va_arg(list, long double)
 			: va_arg(list, double);
-	if (flag.length.L != 1)
+	if (flag.length.lll != 1)
 		str = ft_string_float(number, flag);
 	else
 		str = ft_long_float(number, flag);

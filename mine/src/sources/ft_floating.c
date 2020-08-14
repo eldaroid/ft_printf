@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 16:43:45 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 14:35:10 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:33:27 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 char			*ft_before_dot(double number, int check_dot,
 								t_flag flag, int zero)

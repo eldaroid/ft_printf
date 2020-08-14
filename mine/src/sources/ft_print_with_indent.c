@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:40:29 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 15:01:32 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:33:56 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 int		ft_upower(unsigned long long int n, int base)
 {

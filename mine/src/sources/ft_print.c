@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/30 18:10:19 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 13:05:43 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:33:39 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 int	division_next(int type, va_list list, t_flag flag, int count)
 {

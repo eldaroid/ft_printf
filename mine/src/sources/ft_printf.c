@@ -6,11 +6,11 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 14:24:33 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 13:19:21 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 16:50:42 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 t_flag	ft_parse_len(const char *format, size_t *i, va_list list, t_flag flag)
 {
@@ -22,7 +22,7 @@ t_flag	ft_parse_len(const char *format, size_t *i, va_list list, t_flag flag)
 	else if (format[*i] == 'l')
 		flag.length.l = 1;
 	else if (format[*i] == 'L')
-		flag.length.L = 1;
+		flag.length.lll = 1;
 	else if (format[*i] == 'z')
 		flag.length.l = 'z';
 	else if (format[*i] == 'j')
@@ -41,7 +41,7 @@ t_flag	ft_parse_len(const char *format, size_t *i, va_list list, t_flag flag)
 
 t_flag	ft_parse_flag(const char *format, size_t *i, va_list list, t_flag flag)
 {
-	while (!(ft_strchr("cspdiuxoXfegUZ%", format[*i])) && format[*i])
+	while (!(ft_strrchr("cspdiuxoXfegUZ%", format[*i])) && format[*i])
 	{
 		if (format[*i] == '0')
 			flag = ft_parse_zero(format, i, list, flag);
