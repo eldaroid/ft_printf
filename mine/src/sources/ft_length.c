@@ -1,8 +1,30 @@
-#include "../header/ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_length.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/14 13:12:41 by fgracefo          #+#    #+#             */
+/*   Updated: 2020/08/14 13:34:28 by fgracefo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-long long int		ft_length_int(va_list list, t_flag flag)
+#include "ft_printf.h"
+
+int							check_undefine(t_flag flag)
 {
-	long long int	nbr;
+	if (flag.type != 'U' && flag.type != 'j' && flag.length.l != 'j')
+		return (1);
+	else
+	{
+		return (0);
+	}
+}
+
+long long int				ft_lenint(va_list list, t_flag flag)
+{
+	long long int			nbr;
 
 	nbr = va_arg(list, long long int);
 	if (flag.length.ll == 1)
@@ -34,4 +56,23 @@ unsigned long long int		ft_length_uint(va_list list, t_flag flag)
 	else
 		nbr = (unsigned int)nbr;
 	return (nbr);
+}
+
+int							check_count(int size_star, int str_len)
+{
+	int						count;
+
+	count = str_len;
+	if (size_star > str_len || (-1) * size_star > str_len)
+		count = (size_star > 0) ? size_star : (-1) * size_star;
+	return (count);
+}
+
+void						ft_free(int clean, char *str)
+{
+	if (clean)
+	{
+		free(str);
+		str = NULL;
+	}
 }

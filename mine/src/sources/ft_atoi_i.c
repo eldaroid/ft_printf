@@ -6,13 +6,13 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 20:27:47 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/13 22:13:39 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 13:34:07 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int				is_double_negative(double nb)
+int		is_double_negative(double nb)
 {
 	int				i;
 	unsigned char	*c_nb;
@@ -24,7 +24,7 @@ int				is_double_negative(double nb)
 	return (i);
 }
 
-char		ft_symbol(int n)
+char	ft_symbol(int n)
 {
 	if (n > 0 && n < 10)
 		return (n + '0');
@@ -48,7 +48,7 @@ char		ft_symbol(int n)
 
 int		ft_atoi_minus_star(size_t *i, va_list list, int sign)
 {
-	int	n;
+	int				n;
 
 	n = 0;
 	(*i)++;
@@ -73,8 +73,8 @@ int		check_all(const char *format, size_t *i, va_list list, int count)
 
 int		ft_count_size(const char *format, size_t *i, va_list list)
 {
-	int	sign;
-	int	count;
+	int				sign;
+	int				count;
 
 	count = 0;
 	sign = 1;
