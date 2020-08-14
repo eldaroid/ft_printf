@@ -6,20 +6,19 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 18:08:41 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/13 18:43:50 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 15:53:00 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	hashing(char type, char **str, int power)
+static void	hashing(char type, char **str)
 {
-	(*str)[power + 2] = '\0';
 	(*str)[0] = '0';
 	(*str)[1] = type;
 }
 
-char	*ft_hash(int power, t_flag flag)
+char		*ft_hash(int power, t_flag flag)
 {
 	char *str;
 
@@ -27,7 +26,7 @@ char	*ft_hash(int power, t_flag flag)
 		return (NULL);
 	str[power] = '\0';
 	if (flag.hash && (flag.type == 'x' || flag.type == 'X'))
-		hashing(flag.type, &str, power);
+		hashing(flag.type, &str);
 	else if (flag.hash && flag.type == 'o')
 	{
 		str[power + 2] = '\0';

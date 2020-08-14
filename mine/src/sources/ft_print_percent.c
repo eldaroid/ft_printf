@@ -6,13 +6,13 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:42:54 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 14:52:58 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 15:53:17 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int		ft_print_indent(char *str, int size_star, int str_len, int clean)
+static int	ft_print_indent(char *str, int size_star, int str_len, int clean)
 {
 	int	count;
 
@@ -34,7 +34,7 @@ static int		ft_print_indent(char *str, int size_star, int str_len, int clean)
 	return (count);
 }
 
-int				ft_print_percent(t_flag flag)
+int			ft_print_percent(t_flag flag)
 {
 	int		count;
 	int		k;

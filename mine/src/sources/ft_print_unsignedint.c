@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 18:41:31 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 14:58:47 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 15:48:17 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,19 +77,26 @@ char	*new_string(t_flag flag, int base, va_list list)
 	unsigned long long int	u;
 	char					*str;
 	int						len;
+	char					*hash;
+	char					*str1;
 
 	u = (check_undefine(flag)) ? ft_length_uint(list, flag)
 		: va_arg(list, long long int);
-	str = ft_utoa_base(u, base, flag);
-	len = ft_strlen(str);
-	if (len != flag.size.zero)
-		str = (flag.hash == 1 && u != 0)
-			? ft_strjoin(ft_hash(ft_power(u, base), flag), str) : str;
+	str1 = ft_utoa_base(u, base, flag);
+	len = ft_strlen(str1);
+	str = str1;
+	hash = ft_hash(ft_power(u, base), flag);
+	if (len != flag.size.zero && flag.hash == 1 && u != 0)
+	{
+		str = ft_strjoin(hash, str1);
+		free(str1);
+	}
 	else if (flag.hash == 1 && u != 0)
 	{
 		str[0] = '0';
 		str[1] = 'x';
 	}
+	free(hash);
 	return (str);
 }
 

@@ -6,7 +6,7 @@
 /*   By: fgracefo <fgracefo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 15:38:33 by fgracefo          #+#    #+#             */
-/*   Updated: 2020/08/14 15:00:22 by fgracefo         ###   ########.fr       */
+/*   Updated: 2020/08/14 15:37:06 by fgracefo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ typedef struct	s_size
 	int			space;
 	int			dot;
 }				t_size;
-
-// star - !'-'!, '+', !'weight'!, ?'#'?, !'*'!
 
 typedef struct	s_flag
 {
@@ -110,7 +108,6 @@ int			ft_upower(unsigned long long int n, int base);
 int     	ft_sprintf(const char *format, va_list list);
 int		check_all(const char *format, size_t *i, va_list list, int count);
 int     	main(void);
-void	hashing(char type, char **str, int power);
 char	*string_of_float(double nb, int precision, int str_after, t_flag flag);
 int	division_next(int type, va_list list, t_flag flag, int count);
 int			check_len(int len, t_flag flag, char *str);
