@@ -8,3 +8,6 @@ FT_PRINTF - это первый алгоритмический проект в [
 
 ![alt text](https://github.com/eldaroid/pictures/blob/master/score_of_printf.png)
 
+## Реализация
+
+![alt text](https://github.com/eldaroid/pictures/blob/master/structure_of_printf.png)
