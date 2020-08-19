@@ -51,8 +51,8 @@
 
 ## Как пользоваться?
 
-Командой make мы скомпилировали ft_printf и создали библиотеку libftprintf.a, которую можно будет использовать в дальнейших проектах.
-![alt text](https://github.com/eldaroid/pictures/blob/master/make_of%20printf.png)
+Командой make мы скомпилировали ft_printf и создали библиотеку libftprintf.a, которую можно будет использовать в дальнейших проектах. Например yourfile, который может иметь следующую структуру: 
+![alt text](https://github.com/eldaroid/pictures/blob/master/yourfile.png)
 
 
 ![alt text](https://github.com/eldaroid/pictures/blob/master/include.png)
