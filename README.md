@@ -18,7 +18,7 @@
 
 |   Conversion   |   Type of argument   |   Effect   |
 |:----------:|:----------------:|:------:|
-| d / i |   int  | Prints an int in decimal form |
+|      d / i |   int  | Prints an int in decimal form |
 |   o   |   unsigned int   | Prints an int in octal form |
 |   u   |   unsigned int   | Prints an unsigned int in decimal form |
 |   x   |   unsigned int   | Prints an int in hexadecimal form (lowercase) |
