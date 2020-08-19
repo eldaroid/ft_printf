@@ -36,16 +36,15 @@
 
 | Flag | Effect |
 |:----:|:------:|
-| - | Left-justify within the field width |
-| + | Forces positive numbers to be preceded with a '+' sign |
-| ' ' (space) | If no sign is going to be written, a blank space is inserted before the value |
-| # | o, x and X conversions are preceded with 0, 0x or 0X respectively |
-| 0 | Pads with zeros instead of the default spaces |
+| - | Выровнять по левому краю в пределах ширины поля |
+| + | Принудительно ставит знак "+" перед положительными числами |
+| ' ' (пробел) | Перед значением вставляется пробел, если нет знакак перед числом |
+| # | Преобразовывает o, x, X так, что перед ними ставится 0, 0x,  0X соответственно |
+| 0 | Поле заполняется нулями вместо пробелов по умолчанию |
 
 | Modifiers | Effect |
 |:---------:|:------:|
-| hh | di accept a signed char, ouxX an unsigned char |
-| h | di accept a short int, ouxX an unsigned short int |
-| l | di accept a long int, ouxX an unsigned long int, c a wint_t and s a wchar_t* |
-| ll | di accept a long long int, ouxX an unsigned long long int |
-| j | di accept an intmax_t, uoxX an uintmax_t |
+| hh | типы d, i принимает signed char, ouxX - unsigned char |
+| h | типы d, i принимает short int, ouxX - unsigned short int |
+| l | типы d, i принимает long int, ouxX an unsigned long int |
+| ll | типы d, i принимает long long int, ouxX - unsigned long long int |
