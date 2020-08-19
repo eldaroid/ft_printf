@@ -16,7 +16,7 @@
 
 Краткое изложение различных типов:
 
-|   Conversion   |   Type of argument   |   Effect   |
+|   Тип формата   |   Тип аргумента   |   Результат   |
 |:----------:|:----------------:|:------:|
 |      d / i |   int  | Prints an int in decimal form |
 |   o   |   unsigned int   | Prints an int in octal form |
