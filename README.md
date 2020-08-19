@@ -48,3 +48,8 @@
 | h | типы d, i принимает short int, ouxX - unsigned short int |
 | l | типы d, i принимает long int, ouxX an unsigned long int |
 | ll | типы d, i принимает long long int, ouxX - unsigned long long int |
+
+## Как пользоваться?
+
+Командой make мы скомпилировали проект и создали библиотеку libftprintf.a, которую можно будет использовать в дальнейших проектах.
+![alt text](https://github.com/eldaroid/pictures/blob/master/make_of%20printf.png)
