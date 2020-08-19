@@ -18,12 +18,12 @@
 
 |   Тип формата   |   Тип аргумента   |   Результат   |
 |:----------:|:----------------:|:------:|
-|      d / i |   int  | Prints an int in decimal form |
-|   o   |   unsigned int   | Prints an int in octal form |
-|   u   |   unsigned int   | Prints an unsigned int in decimal form |
-|   x   |   unsigned int   | Prints an int in hexadecimal form (lowercase) |
-|   X   |   unsigned int   | Prints an int in hexadecimal form (uppercase) |
-|   c   |   char   | Prints a char |
-|   s   |   char *   | Prints a string |
-|   p   |   void *   | Prints a pointer's address |
-|   f   |   double   | Prints a float (default precision is 6) |
+|      d / i |   int  | Печатает int в десятичной форме |
+|   o   |   unsigned int   | Печатает int в восьмеричной форме |
+|   u   |   unsigned int   | Печатает unsigned int в десятичной форме |
+|   x   |   unsigned int   | Печатает int в шестнадцатеричной форме (в нижнем регистре)  |
+|   X   |   unsigned int   | Печатает int в шестнадцатеричной форме (в верхнем регистре) |
+|   c   |   char   | Печатает символ |
+|   s   |   char *   | Печатает строку |
+|   p   |   void *   | Печатает адрес указателя |
+|   f   |   double   | Печатает число с плавающей запятой (точность по умолчанию - 6) |
