@@ -55,4 +55,7 @@
 ![alt text](https://github.com/eldaroid/pictures/blob/master/yourfile.png)
 
 
-![alt text](https://github.com/eldaroid/pictures/blob/master/include.png)
+![alt text](https://github.com/eldaroid/pictures/blob/master/compile_printf.png)
+
+
+![alt text](https://github.com/eldaroid/pictures/blob/master/result_of_printf.png)
