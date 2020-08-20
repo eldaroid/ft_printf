@@ -2,17 +2,17 @@
 
 ## Обзор проекта
 
-![alt text](https://github.com/eldaroid/pictures/blob/master/printf_algo.png)
+![alt text](https://github.com/eldaroid/pictures/blob/master/ft_printf/printf_algo.png)
 
 *ft_printf* - это первый алгоритмический проект в [школе программирования от Сбербанка](https://21-school.ru/), написанный на языке C. Целью *ft_printf* является написание аналога функции printf (библиотека <stdio.h>) с использованием функций из ранее написанной библиотеки [libft](https://github.com/eldaroid/libft-fgracefo). Этот проект был завершен 15го августа 2020 года и оценен на 98 баллов. Задание: [`ft_printf.en.pdf`](resources/ft_printf.en.pdf)
 
-![alt text](https://github.com/eldaroid/pictures/blob/master/score_of_printf.png)
+![alt text](https://github.com/eldaroid/pictures/blob/master/ft_printf/score_of_printf.png)
 
 ## Структура ft_printf
 
 *ft_printf* получает строку, называемую форматом, которая может содержать ряд заполнителей представленных после символа % и тип преобразования данных (строка (str), символ (char), int в десятичное, int в шестнадцатеричное и т. д.) Синтаксис: %[flags][width][.precision][length]type
   
-![alt text](https://github.com/eldaroid/pictures/blob/master/structure_of_printf.png)
+![alt text](https://github.com/eldaroid/pictures/blob/master/ft_printf/structure_of_printf.png)
 
 Краткое изложение различных типов:
 
@@ -53,12 +53,12 @@
 
 Командой make мы скомпилировали ft_printf и создали библиотеку libftprintf.a, которую можно будет использовать в дальнейших проектах. Например yourfile (должен находиться в src), который может иметь следующую структуру: 
 
-![alt text](https://github.com/eldaroid/pictures/blob/master/yourfile.png)
+![alt text](https://github.com/eldaroid/pictures/blob/master/ft_printf/yourfile.png)
 
 Компилирование происходит следующим образом:
 
-![alt text](https://github.com/eldaroid/pictures/blob/master/compile_printf.png)
+![alt text](https://github.com/eldaroid/pictures/blob/master/ft_printf/compile_printf.png)
 
 Результат:
 
-![alt text](https://github.com/eldaroid/pictures/blob/master/result_of_printf.png)
+![alt text](https://github.com/eldaroid/pictures/blob/master/ft_printf/result_of_printf.png)
