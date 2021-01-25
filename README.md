@@ -1,5 +1,7 @@
 # ft_printf
 
+[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/fgracefo/ft_printf)](https://github.com/JaeSeoKim/badge42)
+
 ## Обзор проекта
 
 ![alt text](https://github.com/eldaroid/pictures/blob/master/ft_printf/printf_algo.png)
