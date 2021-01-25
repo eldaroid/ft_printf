@@ -1,8 +1,8 @@
 # ft_printf
 
-[![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/jaeskim?cursus=42)](https://github.com/JaeSeoKim/badge42)
+[![42 stats](https://badge42.herokuapp.com/api/stats/fgracefo?privacyEmail=true)](https://github.com/JaeSeoKim/badge42)
 
-[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/fgracefo/ft_printf)](https://github.com/JaeSeoKim/badge42)
+[![42Project Score](https://badge42.herokuapp.com/api/project/fgracefo/ft_printf)](https://github.com/JaeSeoKim/badge42)
 
 ## Обзор проекта
 
