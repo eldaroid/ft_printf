@@ -1,6 +1,6 @@
 # ft_printf
 
-[![42 stats](https://badge42.herokuapp.com/api/stats/fgracefo?cursus=42&privacyEmail=true)](https://github.com/eldaroid/ft_printf)
+[![42 stats](https://badge42.herokuapp.com/api/stats/fgracefo?cursus=42&privacyEmail=true)]
 
 ## Обзор проекта
 
