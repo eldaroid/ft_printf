@@ -6,7 +6,7 @@
 
 ![alt text](https://github.com/eldaroid/pictures/blob/master/ft_printf/printf_algo.png)
 
-*ft_printf* - это первый алгоритмический проект в [школе программирования от Сбербанка](https://21-school.ru/), написанный на языке C. Целью *ft_printf* является написание аналога функции printf (библиотека <stdio.h>) с использованием функций из ранее написанной библиотеки [libft](https://github.com/eldaroid/libft-fgracefo). Этот проект был завершен 15го августа 2020 года и оценен на [![42Project Score](https://badge42.herokuapp.com/api/project/fgracefo/ft_printf)]. Задание: [`ft_printf.en.pdf`](resources/ft_printf.en.pdf)
+*ft_printf* - это первый алгоритмический проект в [школе программирования от Сбербанка](https://21-school.ru/), написанный на языке C. Целью *ft_printf* является написание аналога функции printf (библиотека <stdio.h>) с использованием функций из ранее написанной библиотеки [libft](https://github.com/eldaroid/libft-fgracefo). Этот проект был завершен 15го августа 2020 года и оценен на ![42Project Score](https://badge42.herokuapp.com/api/project/fgracefo/ft_printf). Задание: [`ft_printf.en.pdf`](resources/ft_printf.en.pdf)
 
 ![alt text](https://github.com/eldaroid/pictures/blob/master/ft_printf/score_of_printf.png)
 
